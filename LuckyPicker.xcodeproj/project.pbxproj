@@ -7,6 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F94C2A4D1E9FB54800E707D9 /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A241E9FB54800E707D9 /* HeroAnimatorViewContext.swift */; };
+		F94C2A4E1E9FB54800E707D9 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A251E9FB54800E707D9 /* HeroCoreAnimationViewContext.swift */; };
+		F94C2A4F1E9FB54800E707D9 /* HeroDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A261E9FB54800E707D9 /* HeroDefaultAnimator.swift */; };
+		F94C2A501E9FB54800E707D9 /* HeroViewPropertyViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A271E9FB54800E707D9 /* HeroViewPropertyViewContext.swift */; };
+		F94C2A511E9FB54800E707D9 /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A291E9FB54800E707D9 /* HeroDebugPlugin.swift */; };
+		F94C2A521E9FB54800E707D9 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A2A1E9FB54800E707D9 /* HeroDebugView.swift */; };
+		F94C2A531E9FB54800E707D9 /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A2B1E9FB54800E707D9 /* DefaultAnimationPreprocessor.swift */; };
+		F94C2A541E9FB54800E707D9 /* Array+HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A2D1E9FB54800E707D9 /* Array+HeroModifier.swift */; };
+		F94C2A551E9FB54800E707D9 /* CALayer+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A2E1E9FB54800E707D9 /* CALayer+Hero.swift */; };
+		F94C2A561E9FB54800E707D9 /* CAMediaTimingFunction+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A2F1E9FB54800E707D9 /* CAMediaTimingFunction+Hero.swift */; };
+		F94C2A571E9FB54800E707D9 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A301E9FB54800E707D9 /* CG+Hero.swift */; };
+		F94C2A581E9FB54800E707D9 /* DispatchQueue+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A311E9FB54800E707D9 /* DispatchQueue+Hero.swift */; };
+		F94C2A591E9FB54800E707D9 /* UIKit+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A321E9FB54800E707D9 /* UIKit+Hero.swift */; };
+		F94C2A5A1E9FB54800E707D9 /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A331E9FB54800E707D9 /* UIView+Hero.swift */; };
+		F94C2A5B1E9FB54800E707D9 /* UIViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A341E9FB54800E707D9 /* UIViewController+Hero.swift */; };
+		F94C2A5C1E9FB54800E707D9 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A361E9FB54800E707D9 /* Hero.swift */; };
+		F94C2A5D1E9FB54800E707D9 /* HeroBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A371E9FB54800E707D9 /* HeroBaseController.swift */; };
+		F94C2A5E1E9FB54800E707D9 /* HeroContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A381E9FB54800E707D9 /* HeroContext.swift */; };
+		F94C2A5F1E9FB54800E707D9 /* HeroIndependentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A391E9FB54800E707D9 /* HeroIndependentController.swift */; };
+		F94C2A601E9FB54800E707D9 /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A3A1E9FB54800E707D9 /* HeroModifier+HeroStringConvertible.swift */; };
+		F94C2A611E9FB54800E707D9 /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A3B1E9FB54800E707D9 /* HeroModifier.swift */; };
+		F94C2A621E9FB54800E707D9 /* HeroPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A3C1E9FB54800E707D9 /* HeroPlugin.swift */; };
+		F94C2A631E9FB54800E707D9 /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A3D1E9FB54800E707D9 /* HeroStringConvertible.swift */; };
+		F94C2A641E9FB54800E707D9 /* HeroTargetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A3E1E9FB54800E707D9 /* HeroTargetState.swift */; };
+		F94C2A651E9FB54800E707D9 /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A3F1E9FB54800E707D9 /* HeroTypes.swift */; };
+		F94C2A661E9FB54800E707D9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F94C2A401E9FB54800E707D9 /* Info.plist */; };
+		F94C2A671E9FB54800E707D9 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A421E9FB54800E707D9 /* Lexer.swift */; };
+		F94C2A681E9FB54800E707D9 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A431E9FB54800E707D9 /* Nodes.swift */; };
+		F94C2A691E9FB54800E707D9 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A441E9FB54800E707D9 /* Parser.swift */; };
+		F94C2A6A1E9FB54800E707D9 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A451E9FB54800E707D9 /* Regex.swift */; };
+		F94C2A6B1E9FB54800E707D9 /* BasePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A471E9FB54800E707D9 /* BasePreprocessor.swift */; };
+		F94C2A6C1E9FB54800E707D9 /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A481E9FB54800E707D9 /* CascadePreprocessor.swift */; };
+		F94C2A6D1E9FB54800E707D9 /* DurationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A491E9FB54800E707D9 /* DurationPreprocessor.swift */; };
+		F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A4A1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift */; };
+		F94C2A6F1E9FB54800E707D9 /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A4B1E9FB54800E707D9 /* MatchPreprocessor.swift */; };
+		F94C2A701E9FB54800E707D9 /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A4C1E9FB54800E707D9 /* SourcePreprocessor.swift */; };
 		F98634901E9E08890014DE7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F986348F1E9E08890014DE7D /* main.m */; };
 		F98634931E9E08890014DE7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F98634921E9E08890014DE7D /* AppDelegate.m */; };
 		F98634961E9E08890014DE7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98634951E9E08890014DE7D /* ViewController.m */; };
@@ -16,6 +52,43 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F94C2A241E9FB54800E707D9 /* HeroAnimatorViewContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAnimatorViewContext.swift; sourceTree = "<group>"; };
+		F94C2A251E9FB54800E707D9 /* HeroCoreAnimationViewContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCoreAnimationViewContext.swift; sourceTree = "<group>"; };
+		F94C2A261E9FB54800E707D9 /* HeroDefaultAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDefaultAnimator.swift; sourceTree = "<group>"; };
+		F94C2A271E9FB54800E707D9 /* HeroViewPropertyViewContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroViewPropertyViewContext.swift; sourceTree = "<group>"; };
+		F94C2A291E9FB54800E707D9 /* HeroDebugPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDebugPlugin.swift; sourceTree = "<group>"; };
+		F94C2A2A1E9FB54800E707D9 /* HeroDebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDebugView.swift; sourceTree = "<group>"; };
+		F94C2A2B1E9FB54800E707D9 /* DefaultAnimationPreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultAnimationPreprocessor.swift; sourceTree = "<group>"; };
+		F94C2A2D1E9FB54800E707D9 /* Array+HeroModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+HeroModifier.swift"; sourceTree = "<group>"; };
+		F94C2A2E1E9FB54800E707D9 /* CALayer+Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Hero.swift"; sourceTree = "<group>"; };
+		F94C2A2F1E9FB54800E707D9 /* CAMediaTimingFunction+Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+Hero.swift"; sourceTree = "<group>"; };
+		F94C2A301E9FB54800E707D9 /* CG+Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CG+Hero.swift"; sourceTree = "<group>"; };
+		F94C2A311E9FB54800E707D9 /* DispatchQueue+Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Hero.swift"; sourceTree = "<group>"; };
+		F94C2A321E9FB54800E707D9 /* UIKit+Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Hero.swift"; sourceTree = "<group>"; };
+		F94C2A331E9FB54800E707D9 /* UIView+Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Hero.swift"; sourceTree = "<group>"; };
+		F94C2A341E9FB54800E707D9 /* UIViewController+Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Hero.swift"; sourceTree = "<group>"; };
+		F94C2A351E9FB54800E707D9 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		F94C2A361E9FB54800E707D9 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		F94C2A371E9FB54800E707D9 /* HeroBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroBaseController.swift; sourceTree = "<group>"; };
+		F94C2A381E9FB54800E707D9 /* HeroContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroContext.swift; sourceTree = "<group>"; };
+		F94C2A391E9FB54800E707D9 /* HeroIndependentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroIndependentController.swift; sourceTree = "<group>"; };
+		F94C2A3A1E9FB54800E707D9 /* HeroModifier+HeroStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HeroModifier+HeroStringConvertible.swift"; sourceTree = "<group>"; };
+		F94C2A3B1E9FB54800E707D9 /* HeroModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroModifier.swift; sourceTree = "<group>"; };
+		F94C2A3C1E9FB54800E707D9 /* HeroPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroPlugin.swift; sourceTree = "<group>"; };
+		F94C2A3D1E9FB54800E707D9 /* HeroStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroStringConvertible.swift; sourceTree = "<group>"; };
+		F94C2A3E1E9FB54800E707D9 /* HeroTargetState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTargetState.swift; sourceTree = "<group>"; };
+		F94C2A3F1E9FB54800E707D9 /* HeroTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroTypes.swift; sourceTree = "<group>"; };
+		F94C2A401E9FB54800E707D9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F94C2A421E9FB54800E707D9 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
+		F94C2A431E9FB54800E707D9 /* Nodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nodes.swift; sourceTree = "<group>"; };
+		F94C2A441E9FB54800E707D9 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		F94C2A451E9FB54800E707D9 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		F94C2A471E9FB54800E707D9 /* BasePreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePreprocessor.swift; sourceTree = "<group>"; };
+		F94C2A481E9FB54800E707D9 /* CascadePreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CascadePreprocessor.swift; sourceTree = "<group>"; };
+		F94C2A491E9FB54800E707D9 /* DurationPreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationPreprocessor.swift; sourceTree = "<group>"; };
+		F94C2A4A1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgnoreSubviewModifiersPreprocessor.swift; sourceTree = "<group>"; };
+		F94C2A4B1E9FB54800E707D9 /* MatchPreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPreprocessor.swift; sourceTree = "<group>"; };
+		F94C2A4C1E9FB54800E707D9 /* SourcePreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourcePreprocessor.swift; sourceTree = "<group>"; };
 		F986348B1E9E08890014DE7D /* LuckyPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F986348F1E9E08890014DE7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F98634911E9E08890014DE7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +112,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F94C2A221E9FB54800E707D9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2A231E9FB54800E707D9 /* Animator */,
+				F94C2A281E9FB54800E707D9 /* Debug Plugin */,
+				F94C2A2B1E9FB54800E707D9 /* DefaultAnimationPreprocessor.swift */,
+				F94C2A2C1E9FB54800E707D9 /* Extensions */,
+				F94C2A351E9FB54800E707D9 /* Hero.h */,
+				F94C2A361E9FB54800E707D9 /* Hero.swift */,
+				F94C2A371E9FB54800E707D9 /* HeroBaseController.swift */,
+				F94C2A381E9FB54800E707D9 /* HeroContext.swift */,
+				F94C2A391E9FB54800E707D9 /* HeroIndependentController.swift */,
+				F94C2A3A1E9FB54800E707D9 /* HeroModifier+HeroStringConvertible.swift */,
+				F94C2A3B1E9FB54800E707D9 /* HeroModifier.swift */,
+				F94C2A3C1E9FB54800E707D9 /* HeroPlugin.swift */,
+				F94C2A3D1E9FB54800E707D9 /* HeroStringConvertible.swift */,
+				F94C2A3E1E9FB54800E707D9 /* HeroTargetState.swift */,
+				F94C2A3F1E9FB54800E707D9 /* HeroTypes.swift */,
+				F94C2A401E9FB54800E707D9 /* Info.plist */,
+				F94C2A411E9FB54800E707D9 /* Parser */,
+				F94C2A461E9FB54800E707D9 /* Preprocessors */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F94C2A231E9FB54800E707D9 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2A241E9FB54800E707D9 /* HeroAnimatorViewContext.swift */,
+				F94C2A251E9FB54800E707D9 /* HeroCoreAnimationViewContext.swift */,
+				F94C2A261E9FB54800E707D9 /* HeroDefaultAnimator.swift */,
+				F94C2A271E9FB54800E707D9 /* HeroViewPropertyViewContext.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
+		F94C2A281E9FB54800E707D9 /* Debug Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2A291E9FB54800E707D9 /* HeroDebugPlugin.swift */,
+				F94C2A2A1E9FB54800E707D9 /* HeroDebugView.swift */,
+			);
+			path = "Debug Plugin";
+			sourceTree = "<group>";
+		};
+		F94C2A2C1E9FB54800E707D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2A2D1E9FB54800E707D9 /* Array+HeroModifier.swift */,
+				F94C2A2E1E9FB54800E707D9 /* CALayer+Hero.swift */,
+				F94C2A2F1E9FB54800E707D9 /* CAMediaTimingFunction+Hero.swift */,
+				F94C2A301E9FB54800E707D9 /* CG+Hero.swift */,
+				F94C2A311E9FB54800E707D9 /* DispatchQueue+Hero.swift */,
+				F94C2A321E9FB54800E707D9 /* UIKit+Hero.swift */,
+				F94C2A331E9FB54800E707D9 /* UIView+Hero.swift */,
+				F94C2A341E9FB54800E707D9 /* UIViewController+Hero.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F94C2A411E9FB54800E707D9 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2A421E9FB54800E707D9 /* Lexer.swift */,
+				F94C2A431E9FB54800E707D9 /* Nodes.swift */,
+				F94C2A441E9FB54800E707D9 /* Parser.swift */,
+				F94C2A451E9FB54800E707D9 /* Regex.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		F94C2A461E9FB54800E707D9 /* Preprocessors */ = {
+			isa = PBXGroup;
+			children = (
+				F94C2A471E9FB54800E707D9 /* BasePreprocessor.swift */,
+				F94C2A481E9FB54800E707D9 /* CascadePreprocessor.swift */,
+				F94C2A491E9FB54800E707D9 /* DurationPreprocessor.swift */,
+				F94C2A4A1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift */,
+				F94C2A4B1E9FB54800E707D9 /* MatchPreprocessor.swift */,
+				F94C2A4C1E9FB54800E707D9 /* SourcePreprocessor.swift */,
+			);
+			path = Preprocessors;
+			sourceTree = "<group>";
+		};
 		F98634821E9E08890014DE7D = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +223,7 @@
 				F986349A1E9E08890014DE7D /* Assets.xcassets */,
 				F986349C1E9E08890014DE7D /* LaunchScreen.storyboard */,
 				F986349F1E9E08890014DE7D /* Info.plist */,
+				F94C2A221E9FB54800E707D9 /* Sources */,
 				F986348E1E9E08890014DE7D /* Supporting Files */,
 			);
 			path = LuckyPicker;
@@ -111,6 +269,7 @@
 					F986348A1E9E08890014DE7D = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = J27JGZX77C;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94C2A661E9FB54800E707D9 /* Info.plist in Resources */,
 				F986349E1E9E08890014DE7D /* LaunchScreen.storyboard in Resources */,
 				F986349B1E9E08890014DE7D /* Assets.xcassets in Resources */,
 				F98634991E9E08890014DE7D /* Main.storyboard in Resources */,
@@ -151,9 +311,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94C2A4F1E9FB54800E707D9 /* HeroDefaultAnimator.swift in Sources */,
+				F94C2A6A1E9FB54800E707D9 /* Regex.swift in Sources */,
+				F94C2A6D1E9FB54800E707D9 /* DurationPreprocessor.swift in Sources */,
+				F94C2A621E9FB54800E707D9 /* HeroPlugin.swift in Sources */,
+				F94C2A541E9FB54800E707D9 /* Array+HeroModifier.swift in Sources */,
+				F94C2A5B1E9FB54800E707D9 /* UIViewController+Hero.swift in Sources */,
+				F94C2A561E9FB54800E707D9 /* CAMediaTimingFunction+Hero.swift in Sources */,
+				F94C2A601E9FB54800E707D9 /* HeroModifier+HeroStringConvertible.swift in Sources */,
 				F98634961E9E08890014DE7D /* ViewController.m in Sources */,
+				F94C2A551E9FB54800E707D9 /* CALayer+Hero.swift in Sources */,
+				F94C2A6F1E9FB54800E707D9 /* MatchPreprocessor.swift in Sources */,
+				F94C2A5F1E9FB54800E707D9 /* HeroIndependentController.swift in Sources */,
+				F94C2A651E9FB54800E707D9 /* HeroTypes.swift in Sources */,
+				F94C2A671E9FB54800E707D9 /* Lexer.swift in Sources */,
+				F94C2A5C1E9FB54800E707D9 /* Hero.swift in Sources */,
+				F94C2A521E9FB54800E707D9 /* HeroDebugView.swift in Sources */,
+				F94C2A5D1E9FB54800E707D9 /* HeroBaseController.swift in Sources */,
+				F94C2A701E9FB54800E707D9 /* SourcePreprocessor.swift in Sources */,
+				F94C2A501E9FB54800E707D9 /* HeroViewPropertyViewContext.swift in Sources */,
+				F94C2A571E9FB54800E707D9 /* CG+Hero.swift in Sources */,
+				F94C2A581E9FB54800E707D9 /* DispatchQueue+Hero.swift in Sources */,
+				F94C2A691E9FB54800E707D9 /* Parser.swift in Sources */,
+				F94C2A4D1E9FB54800E707D9 /* HeroAnimatorViewContext.swift in Sources */,
+				F94C2A5E1E9FB54800E707D9 /* HeroContext.swift in Sources */,
+				F94C2A5A1E9FB54800E707D9 /* UIView+Hero.swift in Sources */,
+				F94C2A631E9FB54800E707D9 /* HeroStringConvertible.swift in Sources */,
+				F94C2A591E9FB54800E707D9 /* UIKit+Hero.swift in Sources */,
+				F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
+				F94C2A611E9FB54800E707D9 /* HeroModifier.swift in Sources */,
+				F94C2A641E9FB54800E707D9 /* HeroTargetState.swift in Sources */,
+				F94C2A531E9FB54800E707D9 /* DefaultAnimationPreprocessor.swift in Sources */,
+				F94C2A6C1E9FB54800E707D9 /* CascadePreprocessor.swift in Sources */,
+				F94C2A681E9FB54800E707D9 /* Nodes.swift in Sources */,
+				F94C2A511E9FB54800E707D9 /* HeroDebugPlugin.swift in Sources */,
+				F94C2A4E1E9FB54800E707D9 /* HeroCoreAnimationViewContext.swift in Sources */,
 				F98634931E9E08890014DE7D /* AppDelegate.m in Sources */,
 				F98634901E9E08890014DE7D /* main.m in Sources */,
+				F94C2A6B1E9FB54800E707D9 /* BasePreprocessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +471,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bangshengxie.lucky-picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -288,6 +484,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bangshengxie.lucky-picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -310,6 +507,7 @@
 				F98634A41E9E08890014DE7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
