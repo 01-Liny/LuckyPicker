@@ -49,6 +49,8 @@
 		F98634991E9E08890014DE7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98634971E9E08890014DE7D /* Main.storyboard */; };
 		F986349B1E9E08890014DE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F986349A1E9E08890014DE7D /* Assets.xcassets */; };
 		F986349E1E9E08890014DE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F986349C1E9E08890014DE7D /* LaunchScreen.storyboard */; };
+		F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2D91EA49DAD003305DB /* BSXUIView.m */; };
+		F9E2D2DD1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2DB1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +101,10 @@
 		F986349A1E9E08890014DE7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F986349D1E9E08890014DE7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F986349F1E9E08890014DE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E2D2D81EA49DAD003305DB /* BSXUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSXUIView.h; sourceTree = "<group>"; };
+		F9E2D2D91EA49DAD003305DB /* BSXUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSXUIView.m; sourceTree = "<group>"; };
+		F9E2D2DA1EA49DAD003305DB /* UIView+BSXMaterialAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSXMaterialAnimation.h"; sourceTree = "<group>"; };
+		F9E2D2DB1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSXMaterialAnimation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,7 @@
 		F986348D1E9E08890014DE7D /* LuckyPicker */ = {
 			isa = PBXGroup;
 			children = (
+				F9E2D2D71EA49DAD003305DB /* BSXMaterialAnimation */,
 				F98634911E9E08890014DE7D /* AppDelegate.h */,
 				F98634921E9E08890014DE7D /* AppDelegate.m */,
 				F98634941E9E08890014DE7D /* ViewController.h */,
@@ -235,6 +242,17 @@
 				F986348F1E9E08890014DE7D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9E2D2D71EA49DAD003305DB /* BSXMaterialAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2D2D81EA49DAD003305DB /* BSXUIView.h */,
+				F9E2D2D91EA49DAD003305DB /* BSXUIView.m */,
+				F9E2D2DA1EA49DAD003305DB /* UIView+BSXMaterialAnimation.h */,
+				F9E2D2DB1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m */,
+			);
+			path = BSXMaterialAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +345,7 @@
 				F94C2A671E9FB54800E707D9 /* Lexer.swift in Sources */,
 				F94C2A5C1E9FB54800E707D9 /* Hero.swift in Sources */,
 				F94C2A521E9FB54800E707D9 /* HeroDebugView.swift in Sources */,
+				F9E2D2DD1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m in Sources */,
 				F94C2A5D1E9FB54800E707D9 /* HeroBaseController.swift in Sources */,
 				F94C2A701E9FB54800E707D9 /* SourcePreprocessor.swift in Sources */,
 				F94C2A501E9FB54800E707D9 /* HeroViewPropertyViewContext.swift in Sources */,
@@ -339,6 +358,7 @@
 				F94C2A631E9FB54800E707D9 /* HeroStringConvertible.swift in Sources */,
 				F94C2A591E9FB54800E707D9 /* UIKit+Hero.swift in Sources */,
 				F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
+				F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */,
 				F94C2A611E9FB54800E707D9 /* HeroModifier.swift in Sources */,
 				F94C2A641E9FB54800E707D9 /* HeroTargetState.swift in Sources */,
 				F94C2A531E9FB54800E707D9 /* DefaultAnimationPreprocessor.swift in Sources */,

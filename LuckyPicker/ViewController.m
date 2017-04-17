@@ -2,7 +2,7 @@
 //  ViewController.m
 //  LuckyPicker
 //
-//  Created by Sam Bundy on 12/04/2017.
+//  Created by BangshengXie on 12/04/2017.
 //  Copyright © 2017 BangshengXie. All rights reserved.
 //
 
