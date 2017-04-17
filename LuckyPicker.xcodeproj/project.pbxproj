@@ -51,6 +51,14 @@
 		F986349E1E9E08890014DE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F986349C1E9E08890014DE7D /* LaunchScreen.storyboard */; };
 		F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2D91EA49DAD003305DB /* BSXUIView.m */; };
 		F9E2D2DD1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2DB1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m */; };
+		F9E2D2EE1EA4AA6C003305DB /* Random.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2ED1EA4AA6C003305DB /* Random.m */; };
+		F9E2D2F11EA5040D003305DB /* RandomList.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2F01EA5040D003305DB /* RandomList.m */; };
+		F9E2D3091EA5E5B4003305DB /* RandomPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3081EA5E5B4003305DB /* RandomPassword.m */; };
+		F9E2D3471EA6EE9C003305DB /* RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3461EA6EE9C003305DB /* RandomColor.m */; };
+		F9E2D34A1EA6EF57003305DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2D3491EA6EF57003305DB /* UIKit.framework */; };
+		F9E2D34C1EA6EF5C003305DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2D34B1EA6EF5C003305DB /* CoreData.framework */; };
+		F9E2D34E1EA6EF62003305DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2D34D1EA6EF62003305DB /* QuartzCore.framework */; };
+		F9E2D3501EA707B8003305DB /* MaterialColor.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E2D34F1EA707B8003305DB /* MaterialColor.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +113,18 @@
 		F9E2D2D91EA49DAD003305DB /* BSXUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSXUIView.m; sourceTree = "<group>"; };
 		F9E2D2DA1EA49DAD003305DB /* UIView+BSXMaterialAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSXMaterialAnimation.h"; sourceTree = "<group>"; };
 		F9E2D2DB1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSXMaterialAnimation.m"; sourceTree = "<group>"; };
+		F9E2D2EC1EA4AA6C003305DB /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Random.h; path = Models/Random/Random.h; sourceTree = "<group>"; };
+		F9E2D2ED1EA4AA6C003305DB /* Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Random.m; path = Models/Random/Random.m; sourceTree = "<group>"; };
+		F9E2D2EF1EA5040D003305DB /* RandomList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomList.h; path = Models/Random/RandomList.h; sourceTree = "<group>"; };
+		F9E2D2F01EA5040D003305DB /* RandomList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomList.m; path = Models/Random/RandomList.m; sourceTree = "<group>"; };
+		F9E2D3071EA5E5B4003305DB /* RandomPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomPassword.h; path = Models/Random/RandomPassword.h; sourceTree = "<group>"; };
+		F9E2D3081EA5E5B4003305DB /* RandomPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomPassword.m; path = Models/Random/RandomPassword.m; sourceTree = "<group>"; };
+		F9E2D3451EA6EE9C003305DB /* RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomColor.h; path = Models/Random/RandomColor.h; sourceTree = "<group>"; };
+		F9E2D3461EA6EE9C003305DB /* RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomColor.m; path = Models/Random/RandomColor.m; sourceTree = "<group>"; };
+		F9E2D3491EA6EF57003305DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F9E2D34B1EA6EF5C003305DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F9E2D34D1EA6EF62003305DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F9E2D34F1EA707B8003305DB /* MaterialColor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MaterialColor.json; path = JsonData/MaterialColor.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +132,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E2D34E1EA6EF62003305DB /* QuartzCore.framework in Frameworks */,
+				F9E2D34C1EA6EF5C003305DB /* CoreData.framework in Frameworks */,
+				F9E2D34A1EA6EF57003305DB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +230,7 @@
 			children = (
 				F986348D1E9E08890014DE7D /* LuckyPicker */,
 				F986348C1E9E08890014DE7D /* Products */,
+				F9E2D3481EA6EF56003305DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +245,8 @@
 		F986348D1E9E08890014DE7D /* LuckyPicker */ = {
 			isa = PBXGroup;
 			children = (
+				F9E2D3511EA707CB003305DB /* JsonData */,
+				F9E2D2EA1EA4AA36003305DB /* Models */,
 				F9E2D2D71EA49DAD003305DB /* BSXMaterialAnimation */,
 				F98634911E9E08890014DE7D /* AppDelegate.h */,
 				F98634921E9E08890014DE7D /* AppDelegate.m */,
@@ -255,6 +281,47 @@
 			path = BSXMaterialAnimation;
 			sourceTree = "<group>";
 		};
+		F9E2D2EA1EA4AA36003305DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2D2EB1EA4AA49003305DB /* Random */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F9E2D2EB1EA4AA49003305DB /* Random */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2D2EC1EA4AA6C003305DB /* Random.h */,
+				F9E2D2ED1EA4AA6C003305DB /* Random.m */,
+				F9E2D2EF1EA5040D003305DB /* RandomList.h */,
+				F9E2D2F01EA5040D003305DB /* RandomList.m */,
+				F9E2D3071EA5E5B4003305DB /* RandomPassword.h */,
+				F9E2D3081EA5E5B4003305DB /* RandomPassword.m */,
+				F9E2D3451EA6EE9C003305DB /* RandomColor.h */,
+				F9E2D3461EA6EE9C003305DB /* RandomColor.m */,
+			);
+			name = Random;
+			sourceTree = "<group>";
+		};
+		F9E2D3481EA6EF56003305DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2D34D1EA6EF62003305DB /* QuartzCore.framework */,
+				F9E2D34B1EA6EF5C003305DB /* CoreData.framework */,
+				F9E2D3491EA6EF57003305DB /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9E2D3511EA707CB003305DB /* JsonData */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2D34F1EA707B8003305DB /* MaterialColor.json */,
+			);
+			name = JsonData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,7 +348,7 @@
 		F98634831E9E08890014DE7D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = BangshengXie;
 				TargetAttributes = {
 					F986348A1E9E08890014DE7D = {
@@ -316,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F94C2A661E9FB54800E707D9 /* Info.plist in Resources */,
+				F9E2D3501EA707B8003305DB /* MaterialColor.json in Resources */,
 				F986349E1E9E08890014DE7D /* LaunchScreen.storyboard in Resources */,
 				F986349B1E9E08890014DE7D /* Assets.xcassets in Resources */,
 				F98634991E9E08890014DE7D /* Main.storyboard in Resources */,
@@ -333,6 +401,7 @@
 				F94C2A6A1E9FB54800E707D9 /* Regex.swift in Sources */,
 				F94C2A6D1E9FB54800E707D9 /* DurationPreprocessor.swift in Sources */,
 				F94C2A621E9FB54800E707D9 /* HeroPlugin.swift in Sources */,
+				F9E2D2F11EA5040D003305DB /* RandomList.m in Sources */,
 				F94C2A541E9FB54800E707D9 /* Array+HeroModifier.swift in Sources */,
 				F94C2A5B1E9FB54800E707D9 /* UIViewController+Hero.swift in Sources */,
 				F94C2A561E9FB54800E707D9 /* CAMediaTimingFunction+Hero.swift in Sources */,
@@ -342,6 +411,7 @@
 				F94C2A6F1E9FB54800E707D9 /* MatchPreprocessor.swift in Sources */,
 				F94C2A5F1E9FB54800E707D9 /* HeroIndependentController.swift in Sources */,
 				F94C2A651E9FB54800E707D9 /* HeroTypes.swift in Sources */,
+				F9E2D3471EA6EE9C003305DB /* RandomColor.m in Sources */,
 				F94C2A671E9FB54800E707D9 /* Lexer.swift in Sources */,
 				F94C2A5C1E9FB54800E707D9 /* Hero.swift in Sources */,
 				F94C2A521E9FB54800E707D9 /* HeroDebugView.swift in Sources */,
@@ -355,6 +425,7 @@
 				F94C2A4D1E9FB54800E707D9 /* HeroAnimatorViewContext.swift in Sources */,
 				F94C2A5E1E9FB54800E707D9 /* HeroContext.swift in Sources */,
 				F94C2A5A1E9FB54800E707D9 /* UIView+Hero.swift in Sources */,
+				F9E2D2EE1EA4AA6C003305DB /* Random.m in Sources */,
 				F94C2A631E9FB54800E707D9 /* HeroStringConvertible.swift in Sources */,
 				F94C2A591E9FB54800E707D9 /* UIKit+Hero.swift in Sources */,
 				F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
@@ -362,6 +433,7 @@
 				F94C2A611E9FB54800E707D9 /* HeroModifier.swift in Sources */,
 				F94C2A641E9FB54800E707D9 /* HeroTargetState.swift in Sources */,
 				F94C2A531E9FB54800E707D9 /* DefaultAnimationPreprocessor.swift in Sources */,
+				F9E2D3091EA5E5B4003305DB /* RandomPassword.m in Sources */,
 				F94C2A6C1E9FB54800E707D9 /* CascadePreprocessor.swift in Sources */,
 				F94C2A681E9FB54800E707D9 /* Nodes.swift in Sources */,
 				F94C2A511E9FB54800E707D9 /* HeroDebugPlugin.swift in Sources */,
@@ -478,6 +550,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
