@@ -60,3 +60,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 # End of https://www.gitignore.io/api/xcode
+
+#ignore node_modules
+node_modules/
+package.json
