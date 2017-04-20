@@ -23,6 +23,13 @@
     return self;
 }
 
+#pragma mark - get offset
+
+- (int32_t)getOffset
+{
+    return abs(self.toValue - self.fromValue) +1;
+}
+
 #pragma mark - generate
 
 - (int32_t)generate

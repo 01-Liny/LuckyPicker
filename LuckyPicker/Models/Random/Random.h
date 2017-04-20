@@ -14,6 +14,7 @@
 @property (assign, nonatomic) int32_t toValue;
 
 - (id)init;
+- (int32_t)getOffset;
 - (int32_t)generate;
 
 @end

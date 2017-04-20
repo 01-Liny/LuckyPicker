@@ -59,6 +59,7 @@
 		F9E2D34C1EA6EF5C003305DB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2D34B1EA6EF5C003305DB /* CoreData.framework */; };
 		F9E2D34E1EA6EF62003305DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2D34D1EA6EF62003305DB /* QuartzCore.framework */; };
 		F9E2D3501EA707B8003305DB /* MaterialColor.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E2D34F1EA707B8003305DB /* MaterialColor.json */; };
+		F9E2D3551EA84429003305DB /* RandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3541EA84429003305DB /* RandomViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +126,8 @@
 		F9E2D34B1EA6EF5C003305DB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F9E2D34D1EA6EF62003305DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F9E2D34F1EA707B8003305DB /* MaterialColor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MaterialColor.json; path = JsonData/MaterialColor.json; sourceTree = "<group>"; };
+		F9E2D3531EA84429003305DB /* RandomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomViewController.h; path = ViewController/RandomViewController.h; sourceTree = "<group>"; };
+		F9E2D3541EA84429003305DB /* RandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomViewController.m; path = ViewController/RandomViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +248,7 @@
 		F986348D1E9E08890014DE7D /* LuckyPicker */ = {
 			isa = PBXGroup;
 			children = (
+				F9E2D3521EA843CC003305DB /* ViewController */,
 				F9E2D3511EA707CB003305DB /* JsonData */,
 				F9E2D2EA1EA4AA36003305DB /* Models */,
 				F9E2D2D71EA49DAD003305DB /* BSXMaterialAnimation */,
@@ -320,6 +324,15 @@
 				F9E2D34F1EA707B8003305DB /* MaterialColor.json */,
 			);
 			name = JsonData;
+			sourceTree = "<group>";
+		};
+		F9E2D3521EA843CC003305DB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2D3531EA84429003305DB /* RandomViewController.h */,
+				F9E2D3541EA84429003305DB /* RandomViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +441,7 @@
 				F9E2D2EE1EA4AA6C003305DB /* Random.m in Sources */,
 				F94C2A631E9FB54800E707D9 /* HeroStringConvertible.swift in Sources */,
 				F94C2A591E9FB54800E707D9 /* UIKit+Hero.swift in Sources */,
+				F9E2D3551EA84429003305DB /* RandomViewController.m in Sources */,
 				F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
 				F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */,
 				F94C2A611E9FB54800E707D9 /* HeroModifier.swift in Sources */,

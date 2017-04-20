@@ -13,6 +13,6 @@
 @property (assign, nonatomic) NSInteger quantity;
 
 - (id)init;
-- (NSArray*)generateList;
+- (NSMutableArray*)generateList;
 
 @end

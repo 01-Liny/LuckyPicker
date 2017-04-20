@@ -51,22 +51,41 @@
 
 #pragma mark - generate
 
-- (NSArray*)generateList
+- (NSMutableArray*)generateList
 {
     //ensure empty list
     [self.list removeAllObjects];
     
-    NSInteger randomNumber;
-    while (self.list.count < self.quantity)
+    NSMutableArray *tmpList = [[NSMutableArray alloc] initWithCapacity:self.quantity];
+    if(self.fromValue <= self.toValue)
     {
-        randomNumber = [self generate];
-        if(![self.list containsObject:[NSString stringWithFormat:@"%ld", randomNumber]])
+        for(int32_t i=self.fromValue; i<=self.toValue; i++)
         {
-            [self.list addObject:[NSString stringWithFormat:@"%ld", randomNumber]];
+            [tmpList addObject:[NSString stringWithFormat:@"%d", i]];
+        }
+    }
+    else
+    {
+        for(int32_t i=self.toValue; i<=self.fromValue; i++)
+        {
+            [tmpList addObject:[NSString stringWithFormat:@"%d", i]];
         }
     }
     
-    return [self.list copy];
+    Random *tmpRandom = [[Random alloc] init];
+    tmpRandom.toValue = (int32_t)self.quantity - 1;
+    
+    NSInteger randomNumber;
+    while (self.list.count < self.quantity)
+    {
+        randomNumber = [tmpRandom generate];
+        [self.list addObject:[tmpList objectAtIndex:randomNumber]];
+        
+        [tmpList removeObjectAtIndex:randomNumber];
+        tmpRandom.toValue--;
+    }
+    
+    return self.list;
 }
 
 @end
