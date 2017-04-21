@@ -17,6 +17,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *number = [defaults objectForKey:@"isFirstRun"];
+    if(number)
+    {
+        NSLog(@"%@", number);
+        NSLog(@"Second Run");
+    }
+    else
+    {
+        NSLog(@"First Run");
+        [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"isFirstRun"];
+    }
+    [defaults synchronize];
     return YES;
 }
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="RandomListContent" representedClassName="RandomListContent" syncable="YES">
+        <attribute name="item" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="title" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RandomListTitle" inverseName="contents" inverseEntity="RandomListTitle" syncable="YES"/>
+    </entity>
+    <entity name="RandomListTitle" representedClassName="RandomListTitle" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RandomListContent" inverseName="title" inverseEntity="RandomListContent" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RandomListContent" positionX="-27" positionY="18" width="128" height="73"/>
+        <element name="RandomListTitle" positionX="-198" positionY="18" width="128" height="73"/>
+    </elements>
+</model>

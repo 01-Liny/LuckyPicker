@@ -60,6 +60,12 @@
 		F9E2D34E1EA6EF62003305DB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E2D34D1EA6EF62003305DB /* QuartzCore.framework */; };
 		F9E2D3501EA707B8003305DB /* MaterialColor.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E2D34F1EA707B8003305DB /* MaterialColor.json */; };
 		F9E2D3551EA84429003305DB /* RandomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3541EA84429003305DB /* RandomViewController.m */; };
+		F9E2D3581EA9E8CF003305DB /* RandomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3571EA9E8CF003305DB /* RandomTableViewController.m */; };
+		F9E2D36A1EAA0761003305DB /* List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3591EA9FEC8003305DB /* List.xcdatamodeld */; };
+		F9E2D3AF1EAA243C003305DB /* RandomListContent+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3A81EAA243B003305DB /* RandomListContent+CoreDataClass.m */; };
+		F9E2D3B01EAA243C003305DB /* RandomListContent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3AA1EAA243B003305DB /* RandomListContent+CoreDataProperties.m */; };
+		F9E2D3B11EAA243C003305DB /* RandomListTitle+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3AC1EAA243B003305DB /* RandomListTitle+CoreDataClass.m */; };
+		F9E2D3B21EAA243C003305DB /* RandomListTitle+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3AE1EAA243C003305DB /* RandomListTitle+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +134,17 @@
 		F9E2D34F1EA707B8003305DB /* MaterialColor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MaterialColor.json; path = JsonData/MaterialColor.json; sourceTree = "<group>"; };
 		F9E2D3531EA84429003305DB /* RandomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomViewController.h; path = ViewController/RandomViewController.h; sourceTree = "<group>"; };
 		F9E2D3541EA84429003305DB /* RandomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomViewController.m; path = ViewController/RandomViewController.m; sourceTree = "<group>"; };
+		F9E2D3561EA9E8CF003305DB /* RandomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomTableViewController.h; path = ViewController/RandomTableViewController.h; sourceTree = "<group>"; };
+		F9E2D3571EA9E8CF003305DB /* RandomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomTableViewController.m; path = ViewController/RandomTableViewController.m; sourceTree = "<group>"; };
+		F9E2D35A1EA9FEC8003305DB /* List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = List.xcdatamodel; sourceTree = "<group>"; };
+		F9E2D3A71EAA243B003305DB /* RandomListContent+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListContent+CoreDataClass.h"; path = "Models/Database/RandomListContent+CoreDataClass.h"; sourceTree = "<group>"; };
+		F9E2D3A81EAA243B003305DB /* RandomListContent+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListContent+CoreDataClass.m"; path = "Models/Database/RandomListContent+CoreDataClass.m"; sourceTree = "<group>"; };
+		F9E2D3A91EAA243B003305DB /* RandomListContent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListContent+CoreDataProperties.h"; path = "Models/Database/RandomListContent+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F9E2D3AA1EAA243B003305DB /* RandomListContent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListContent+CoreDataProperties.m"; path = "Models/Database/RandomListContent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F9E2D3AB1EAA243B003305DB /* RandomListTitle+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListTitle+CoreDataClass.h"; path = "Models/Database/RandomListTitle+CoreDataClass.h"; sourceTree = "<group>"; };
+		F9E2D3AC1EAA243B003305DB /* RandomListTitle+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListTitle+CoreDataClass.m"; path = "Models/Database/RandomListTitle+CoreDataClass.m"; sourceTree = "<group>"; };
+		F9E2D3AD1EAA243B003305DB /* RandomListTitle+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListTitle+CoreDataProperties.h"; path = "Models/Database/RandomListTitle+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F9E2D3AE1EAA243C003305DB /* RandomListTitle+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListTitle+CoreDataProperties.m"; path = "Models/Database/RandomListTitle+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +274,7 @@
 				F98634941E9E08890014DE7D /* ViewController.h */,
 				F98634951E9E08890014DE7D /* ViewController.m */,
 				F98634971E9E08890014DE7D /* Main.storyboard */,
+				F9E2D3591EA9FEC8003305DB /* List.xcdatamodeld */,
 				F986349A1E9E08890014DE7D /* Assets.xcassets */,
 				F986349C1E9E08890014DE7D /* LaunchScreen.storyboard */,
 				F986349F1E9E08890014DE7D /* Info.plist */,
@@ -288,6 +306,7 @@
 		F9E2D2EA1EA4AA36003305DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F9E2D35D1EAA06FB003305DB /* Database */,
 				F9E2D2EB1EA4AA49003305DB /* Random */,
 			);
 			name = Models;
@@ -331,8 +350,25 @@
 			children = (
 				F9E2D3531EA84429003305DB /* RandomViewController.h */,
 				F9E2D3541EA84429003305DB /* RandomViewController.m */,
+				F9E2D3561EA9E8CF003305DB /* RandomTableViewController.h */,
+				F9E2D3571EA9E8CF003305DB /* RandomTableViewController.m */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		F9E2D35D1EAA06FB003305DB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				F9E2D3A71EAA243B003305DB /* RandomListContent+CoreDataClass.h */,
+				F9E2D3A81EAA243B003305DB /* RandomListContent+CoreDataClass.m */,
+				F9E2D3A91EAA243B003305DB /* RandomListContent+CoreDataProperties.h */,
+				F9E2D3AA1EAA243B003305DB /* RandomListContent+CoreDataProperties.m */,
+				F9E2D3AB1EAA243B003305DB /* RandomListTitle+CoreDataClass.h */,
+				F9E2D3AC1EAA243B003305DB /* RandomListTitle+CoreDataClass.m */,
+				F9E2D3AD1EAA243B003305DB /* RandomListTitle+CoreDataProperties.h */,
+				F9E2D3AE1EAA243C003305DB /* RandomListTitle+CoreDataProperties.m */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +450,7 @@
 				F94C2A6A1E9FB54800E707D9 /* Regex.swift in Sources */,
 				F94C2A6D1E9FB54800E707D9 /* DurationPreprocessor.swift in Sources */,
 				F94C2A621E9FB54800E707D9 /* HeroPlugin.swift in Sources */,
+				F9E2D36A1EAA0761003305DB /* List.xcdatamodeld in Sources */,
 				F9E2D2F11EA5040D003305DB /* RandomList.m in Sources */,
 				F94C2A541E9FB54800E707D9 /* Array+HeroModifier.swift in Sources */,
 				F94C2A5B1E9FB54800E707D9 /* UIViewController+Hero.swift in Sources */,
@@ -440,6 +477,7 @@
 				F94C2A5A1E9FB54800E707D9 /* UIView+Hero.swift in Sources */,
 				F9E2D2EE1EA4AA6C003305DB /* Random.m in Sources */,
 				F94C2A631E9FB54800E707D9 /* HeroStringConvertible.swift in Sources */,
+				F9E2D3581EA9E8CF003305DB /* RandomTableViewController.m in Sources */,
 				F94C2A591E9FB54800E707D9 /* UIKit+Hero.swift in Sources */,
 				F9E2D3551EA84429003305DB /* RandomViewController.m in Sources */,
 				F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
@@ -447,8 +485,12 @@
 				F94C2A611E9FB54800E707D9 /* HeroModifier.swift in Sources */,
 				F94C2A641E9FB54800E707D9 /* HeroTargetState.swift in Sources */,
 				F94C2A531E9FB54800E707D9 /* DefaultAnimationPreprocessor.swift in Sources */,
+				F9E2D3B01EAA243C003305DB /* RandomListContent+CoreDataProperties.m in Sources */,
+				F9E2D3B21EAA243C003305DB /* RandomListTitle+CoreDataProperties.m in Sources */,
 				F9E2D3091EA5E5B4003305DB /* RandomPassword.m in Sources */,
+				F9E2D3AF1EAA243C003305DB /* RandomListContent+CoreDataClass.m in Sources */,
 				F94C2A6C1E9FB54800E707D9 /* CascadePreprocessor.swift in Sources */,
+				F9E2D3B11EAA243C003305DB /* RandomListTitle+CoreDataClass.m in Sources */,
 				F94C2A681E9FB54800E707D9 /* Nodes.swift in Sources */,
 				F94C2A511E9FB54800E707D9 /* HeroDebugPlugin.swift in Sources */,
 				F94C2A4E1E9FB54800E707D9 /* HeroCoreAnimationViewContext.swift in Sources */,
@@ -617,6 +659,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F9E2D3591EA9FEC8003305DB /* List.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F9E2D35A1EA9FEC8003305DB /* List.xcdatamodel */,
+			);
+			currentVersion = F9E2D35A1EA9FEC8003305DB /* List.xcdatamodel */;
+			path = List.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F98634831E9E08890014DE7D /* Project object */;
 }
