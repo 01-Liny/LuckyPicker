@@ -1,8 +1,8 @@
 //
-//  RandomListTitle+CoreDataClass.h
+//  RandomListItem+CoreDataClass.h
 //  LuckyPicker
 //
-//  Created by BangshengXie on 21/04/2017.
+//  Created by BangshengXie on 22/04/2017.
 //  Copyright © 2017 BangshengXie. All rights reserved.
 //
 
@@ -13,10 +13,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RandomListTitle : NSManagedObject
+@interface RandomListItem : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "RandomListTitle+CoreDataProperties.h"
+#import "RandomListItem+CoreDataProperties.h"

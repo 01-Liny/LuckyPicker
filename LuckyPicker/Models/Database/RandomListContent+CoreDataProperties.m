@@ -2,7 +2,7 @@
 //  RandomListContent+CoreDataProperties.m
 //  LuckyPicker
 //
-//  Created by BangshengXie on 21/04/2017.
+//  Created by BangshengXie on 22/04/2017.
 //  Copyright © 2017 BangshengXie. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"RandomListContent"];
 }
 
-@dynamic item;
 @dynamic title;
+@dynamic items;
 
 @end

@@ -2,7 +2,7 @@
 //  RandomListContent+CoreDataProperties.h
 //  LuckyPicker
 //
-//  Created by BangshengXie on 21/04/2017.
+//  Created by BangshengXie on 22/04/2017.
 //  Copyright © 2017 BangshengXie. All rights reserved.
 //
 
@@ -15,8 +15,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<RandomListContent *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSString *item;
-@property (nullable, nonatomic, retain) RandomListTitle *title;
+@property (nullable, nonatomic, copy) NSString *title;
+@property (nullable, nonatomic, retain) NSSet<RandomListItem *> *items;
+
+@end
+
+@interface RandomListContent (CoreDataGeneratedAccessors)
+
+- (void)addItemsObject:(RandomListItem *)value;
+- (void)removeItemsObject:(RandomListItem *)value;
+- (void)addItems:(NSSet<RandomListItem *> *)values;
+- (void)removeItems:(NSSet<RandomListItem *> *)values;
 
 @end
 
