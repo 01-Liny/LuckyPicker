@@ -120,7 +120,9 @@
     self.randomList = nil;
     
     [self.pickerView reloadAllComponents];
-    [self.pickerView selectedRowInComponent:0];
+    [self.pickerView selectRow:0
+                   inComponent:0
+                      animated:true];
 }
 
 - (void)addShadow:(UIView*)view
@@ -203,7 +205,6 @@
 
 - (void)generate
 {
-#warning no implement
     if(self.randomList.toValue < 0 )
         return;
     NSMutableArray *tmpList = [self.randomList generateList];
