@@ -84,7 +84,7 @@
         
         CAAnimationGroup *fadeAndScale = [CAAnimationGroup animation];
         fadeAndScale.animations = @[expandScale, fadeIn];
-        fadeAndScale.duration = 1;
+        fadeAndScale.duration = 0.5;
         fadeAndScale.removedOnCompletion = NO;
         fadeAndScale.fillMode = kCAFillModeForwards;
         
@@ -197,7 +197,7 @@
     [self.repeatButton.layer addAnimation:self.hideAnimation
                                    forKey:nil];
     [self setRepeatButton];
-    self.showAnimation.beginTime = CACurrentMediaTime() + 0.2;
+    self.showAnimation.beginTime = CACurrentMediaTime() + 0.1;
     [self.repeatButton.layer addAnimation:self.showAnimation
                                    forKey:nil];
 }
