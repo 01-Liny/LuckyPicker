@@ -88,7 +88,7 @@
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="No Repeat">
+                                        <fragment content="Repeat">
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="24" name=".SFNSText"/>
