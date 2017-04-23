@@ -191,6 +191,8 @@
         [self.managedContext deleteObject:[self.contentArray objectAtIndex:indexPath.row]];
         [self.contentArray removeObjectAtIndex:indexPath.row];
         
+        //保存
+        [self.managedContext save:nil];
         // 接着刷新view
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
         // 不需要主动退出编辑模式，上面更新view的操作完成后就会自动退出编辑模式
