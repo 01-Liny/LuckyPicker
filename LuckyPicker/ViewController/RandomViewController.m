@@ -156,7 +156,7 @@
     self.pickButton.frame = self.pickView.frame;
     
     //numberLabel
-    self.numberLabel. adjustsFontSizeToFitWidth = YES;
+    self.numberLabel.adjustsFontSizeToFitWidth = YES;
     
     //Keybaoard Notification
     [[NSNotificationCenter defaultCenter] addObserver:self

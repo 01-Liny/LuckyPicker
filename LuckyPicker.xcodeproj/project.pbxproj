@@ -68,6 +68,7 @@
 		F9E2D3C01EAAE359003305DB /* RandomListContent+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3BB1EAAE359003305DB /* RandomListContent+CoreDataClass.m */; };
 		F9E2D3C11EAAE359003305DB /* RandomListContent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3BD1EAAE359003305DB /* RandomListContent+CoreDataProperties.m */; };
 		F9E2D3C51EAAF173003305DB /* AddContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3C41EAAF173003305DB /* AddContentViewController.m */; };
+		F9F6E94F1EAC3A7A0053636C /* PickListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E94E1EAC3A7A0053636C /* PickListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,7 +152,9 @@
 		F9E2D3BD1EAAE359003305DB /* RandomListContent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListContent+CoreDataProperties.m"; path = "Models/Database/RandomListContent+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F9E2D3C31EAAF173003305DB /* AddContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddContentViewController.h; path = ViewController/AddContentViewController.h; sourceTree = "<group>"; };
 		F9E2D3C41EAAF173003305DB /* AddContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddContentViewController.m; path = ViewController/AddContentViewController.m; sourceTree = "<group>"; };
-		F9F6E94C1EAB6D980053636C /* IndentifierAvailability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndentifierAvailability.h; sourceTree = "<group>"; };
+		F9F6E94C1EAB6D980053636C /* IdentifierAvailability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentifierAvailability.h; sourceTree = "<group>"; };
+		F9F6E94D1EAC3A7A0053636C /* PickListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickListViewController.h; path = ViewController/PickListViewController.h; sourceTree = "<group>"; };
+		F9F6E94E1EAC3A7A0053636C /* PickListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickListViewController.m; path = ViewController/PickListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,7 +275,7 @@
 		F986348D1E9E08890014DE7D /* LuckyPicker */ = {
 			isa = PBXGroup;
 			children = (
-				F9F6E94C1EAB6D980053636C /* IndentifierAvailability.h */,
+				F9F6E94C1EAB6D980053636C /* IdentifierAvailability.h */,
 				F9E2D3521EA843CC003305DB /* ViewController */,
 				F9E2D3511EA707CB003305DB /* JsonData */,
 				F9E2D2EA1EA4AA36003305DB /* Models */,
@@ -387,6 +390,8 @@
 				F9E2D3571EA9E8CF003305DB /* RandomTableViewController.m */,
 				F9E2D3C31EAAF173003305DB /* AddContentViewController.h */,
 				F9E2D3C41EAAF173003305DB /* AddContentViewController.m */,
+				F9F6E94D1EAC3A7A0053636C /* PickListViewController.h */,
+				F9F6E94E1EAC3A7A0053636C /* PickListViewController.m */,
 			);
 			name = RandomListController;
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				F94C2A6A1E9FB54800E707D9 /* Regex.swift in Sources */,
 				F94C2A6D1E9FB54800E707D9 /* DurationPreprocessor.swift in Sources */,
 				F94C2A621E9FB54800E707D9 /* HeroPlugin.swift in Sources */,
+				F9F6E94F1EAC3A7A0053636C /* PickListViewController.m in Sources */,
 				F9E2D36A1EAA0761003305DB /* List.xcdatamodeld in Sources */,
 				F9E2D2F11EA5040D003305DB /* RandomList.m in Sources */,
 				F94C2A541E9FB54800E707D9 /* Array+HeroModifier.swift in Sources */,

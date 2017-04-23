@@ -19,6 +19,8 @@
 @property (strong, nonatomic) UITextField *currentTextField;
 @property (assign, nonatomic) CGFloat currentOffset;
 
+@property (assign, nonatomic) Boolean isNewContent;
+
 @end
 
 @implementation AddContentViewController
@@ -60,8 +62,10 @@
     //NSLog(@"%@", NSStringFromSelector(_cmd));
     [self updateUI];
     
+    self.isNewContent = false;
     if(self.randomListContent == nil)
     {
+        self.isNewContent = true;
         RandomListContent *content = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListContent"
                                                                    inManagedObjectContext:self.managedContext];
         content.title = @"";
@@ -89,15 +93,33 @@
 
 - (IBAction)cancel:(id)sender
 {
+    [self.view endEditing:true];
     [self clearEmptyItem];
+    if(self.isNewContent)
+    {
+        [self.managedContext deleteObject:self.randomListContent];
+    }
     [self.presentingViewController dismissViewControllerAnimated:true
                                                       completion:nil];
-    
 }
 
-#warning text 未结束编辑的时候 按done不会保存
 - (IBAction)done:(id)sender
 {
+    [self.view endEditing:true];
+    //结束编辑的时候 按done保存当前编辑的TextEdit
+    //[self textFieldDidEndEditing:self.currentTextField];
+//    if([self.currentTextField.superview.superview isKindOfClass:[UITableViewCell class]])
+//    {
+//        NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell*)self.currentTextField.superview.superview];
+//        RandomListItem *item = self.contentArray[indexPath.row];
+//        item.name = self.currentTextField.text;
+//    }
+//    else
+//    {
+//        self.randomListContent.title = self.randomListTitle.text;
+//    }
+    
+    
     [self clearEmptyItem];
     if(self.randomListTitle.text && ![self.randomListTitle.text isEqualToString:@""])
     {
@@ -121,8 +143,8 @@
                 [self.managedContext deleteObject:tmp];
         }
         //reload contentArray use lazy instantiation
-        self.contentArray = nil;
-        [self.tableView reloadData];
+        //self.contentArray = nil;
+        //[self.tableView reloadData];
 }
 
 #pragma mark - tap event
@@ -205,6 +227,11 @@
 
 #pragma mark - <UITextFieldDelegate>
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    self.currentTextField = textField;
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     if(!self.randomListTitle.text || [self.randomListTitle.text isEqualToString:@""])
@@ -227,12 +254,7 @@
         self.randomListContent.title = self.randomListTitle.text;
     }
     self.currentTextField = nil;
-    NSLog(@"Detected");
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    self.currentTextField = textField;
+    NSLog(@"RandomTableView %@", NSStringFromSelector(_cmd));
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -341,8 +363,6 @@
         
         [self.tableView deleteRowsAtIndexPaths:@[indexPath]
                               withRowAnimation:UITableViewRowAnimationBottom];
-        
-        //[self.managedContext save:nil];
         
     }];
     return @[deleteAction];

@@ -8,10 +8,11 @@
 
 #import "RandomTableViewController.h"
 #import <CoreData/CoreData.h>
-#import "IndentifierAvailability.h"
+#import "IdentifierAvailability.h"
 #import "RandomListContent+CoreDataClass.h"
 #import "RandomListItem+CoreDataClass.h"
 #import "AddContentViewController.h"
+#import "PickListViewController.h"
 
 @interface RandomTableViewController ()
 
@@ -60,6 +61,8 @@
     if(!_contentArray)
     {
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RandomListContent"];
+        request.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:RandomListContentSortKey ascending:true]];
+        
         NSError *error = nil;
         NSArray *allContent = [self.managedContext executeFetchRequest:request
                                                                  error:&error];
@@ -74,6 +77,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"RandomTableView %@", NSStringFromSelector(_cmd));
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -87,12 +91,32 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"RandomTableView %@", NSStringFromSelector(_cmd));
+    [super viewWillAppear:animated];
+    self.contentArray = nil;
+    [self.tableView reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:RandomTableViewControllerAddSegueIdentifier])
+    {
+        if([segue.destinationViewController isKindOfClass:[AddContentViewController class]])
+        {
+            AddContentViewController *viewController = (AddContentViewController*)segue.destinationViewController;
+            viewController.managedContext = self.managedContext;
+        }
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -102,12 +126,14 @@
     return self.contentArray.count;
 }
 
+#pragma mark - <UITableViewDelegate>
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"Test" forIndexPath:indexPath];
+    cell = [tableView dequeueReusableCellWithIdentifier:RandomTableViewControllerCellIdentifier
+                                           forIndexPath:indexPath];
     
     RandomListContent *tmp = [self.contentArray objectAtIndex:indexPath.row];
     cell.textLabel.text = tmp.title;
@@ -125,35 +151,8 @@
     return cell;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.contentArray = nil;
-    [self.tableView reloadData];
-}
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:@"Add"])
-    {
-        if([segue.destinationViewController isKindOfClass:[AddContentViewController class]])
-        {
-            AddContentViewController *viewController = (AddContentViewController*)segue.destinationViewController;
-            viewController.managedContext = self.managedContext;
-        }
-    }
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-#warning unused method
+#warning unused method (instead of by editActionForRowAtIndexPath)
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
                                             forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -173,12 +172,12 @@
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView
                   editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-#warning variable name wrong
     UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Edit" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         
-        AddContentViewController *tmp = [self.storyboard instantiateViewControllerWithIdentifier:@"AddContentViewController"];
-        tmp.randomListContent = self.contentArray[indexPath.row];
-        [self.navigationController presentViewController:tmp
+        AddContentViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:AddContentViewControllerIdentifier];
+        destinationViewController.randomListContent = self.contentArray[indexPath.row];
+        destinationViewController.managedContext = self.managedContext;
+        [self.navigationController presentViewController:destinationViewController
                                                 animated:true
                                               completion:nil];
         
@@ -188,9 +187,12 @@
     
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         // 首先改变model
-        //[self.books removeObjectAtIndex:indexPath.row];
+        
+        [self.managedContext deleteObject:[self.contentArray objectAtIndex:indexPath.row]];
+        [self.contentArray removeObjectAtIndex:indexPath.row];
+        
         // 接着刷新view
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
         // 不需要主动退出编辑模式，上面更新view的操作完成后就会自动退出编辑模式
     }];
     
@@ -199,38 +201,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    AddContentViewController *tmp = [self.storyboard instantiateViewControllerWithIdentifier:@"AddContentViewController"];
+    PickListViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:PickListViewControllerIdentifier];
     
-    tmp.randomListContent = self.contentArray[indexPath.row];
-    tmp.managedContext = self.managedContext;
+    destinationViewController.randomListContent = self.contentArray[indexPath.row];
+    destinationViewController.managedContext = self.managedContext;
     
-    [self.navigationController presentViewController:tmp
-                                            animated:true
-                                          completion:nil];
+    [self.navigationController showViewController:destinationViewController
+                                           sender:self];
 }
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
