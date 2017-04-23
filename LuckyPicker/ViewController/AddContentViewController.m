@@ -152,15 +152,25 @@
     //获取键盘高度，在不同设备上，以及中英文下是不同的
     CGFloat kbHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
     
+    CGFloat offset;
     //计算出键盘顶端到inputTextView panel底端的距离(加上自定义的缓冲距离INTERVAL_KEYBOARD，如果需要的话)
-    CGFloat offset = (self.currentTextField.superview.frame.size.height +  //为了多空出Add Item这一行（列表高度都是一样的
-                      self.currentTextField.frame.size.height +
-                      self.currentTextField.frame.origin.y+
-                      self.currentTextField.superview.frame.origin.y +
-                      self.currentTextField.superview.superview.frame.origin.y +
-                      self.currentTextField.superview.superview.superview.frame.origin.y +
-                      self.currentTextField.superview.superview.superview.superview.frame.origin.y
-                      +0) - (self.uiview.frame.size.height - kbHeight);
+    if([self.currentTextField.superview.superview isKindOfClass:[UITableViewCell class]])
+    {
+        offset = (self.currentTextField.superview.frame.size.height +  //为了多空出Add Item这一行（列表高度都是一样的
+                          self.currentTextField.frame.size.height +
+                          self.currentTextField.frame.origin.y+
+                          self.currentTextField.superview.frame.origin.y +
+                          self.currentTextField.superview.superview.frame.origin.y +
+                          self.currentTextField.superview.superview.superview.frame.origin.y +
+                          self.currentTextField.superview.superview.superview.superview.frame.origin.y
+                          +0) - (self.uiview.frame.size.height - kbHeight);
+    }
+    else
+    {
+        offset = (self.currentTextField.frame.size.height +
+                  self.currentTextField.frame.origin.y +
+                  +0) - (self.uiview.frame.size.height - kbHeight);
+    }
     
     // 取得键盘的动画时间，这样可以在视图上移的时候更连贯
     double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
@@ -183,7 +193,7 @@
 //        [UIView animateWithDuration:duration animations:^{
 //            self.uiview.frame = CGRectMake(0, 0, self.uiview.frame.size.width, self.uiview.frame.size.height);
 //        }];
-        //[self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
+        [self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
     }
     
 }
@@ -300,8 +310,14 @@
         NSLog(@"%f %f", offset.x, offset.y);
         
         [tableView reloadData];
-        [tableView layoutIfNeeded]; // Force layout so things are updated before resetting the contentOffset.
-        [tableView setContentOffset:offset];
+        //[tableView layoutIfNeeded]; // Force layout so things are updated before resetting the contentOffset.
+        //[tableView setContentOffset:offset];
+        
+        UITableViewScrollPosition *position;
+        [self.tableView selectRowAtIndexPath:indexPath
+                                    animated:true
+                              scrollPosition:UITableViewScrollPositionTop];
+        [tableView layoutIfNeeded];
         [textField becomeFirstResponder];
     }
     else
