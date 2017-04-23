@@ -73,7 +73,8 @@
     }
     
     Random *tmpRandom = [[Random alloc] init];
-    tmpRandom.toValue = (int32_t)self.quantity - 1;
+    tmpRandom.toValue = [self getOffset] - 1;
+    //tmpRandom.toValue = (int32_t)self.quantity - 1;
     
     NSInteger randomNumber;
     while (self.list.count < self.quantity)
