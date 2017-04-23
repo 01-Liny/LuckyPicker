@@ -17,6 +17,7 @@
 
 @property (strong, nonatomic) NSMutableArray *contentArray;
 @property (strong, nonatomic) UITextField *currentTextField;
+@property (assign, nonatomic) CGFloat currentOffset;
 
 @end
 
@@ -171,28 +172,18 @@
                   self.currentTextField.frame.origin.y +
                   +0) - (self.uiview.frame.size.height - kbHeight);
     }
+    self.currentOffset = offset;
     
     // 取得键盘的动画时间，这样可以在视图上移的时候更连贯
-    double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    //double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
     //将视图上移计算好的偏移
-    if(offset > 0) {
-//        [UIView animateWithDuration:duration animations:^{
-//            self.uiview.frame = CGRectMake(0.0f, -offset, self.uiview.frame.size.width, self.uiview.frame.size.height);
-//        }];
+    if(offset > 0)
+    {
         [self.tableView setContentOffset:CGPointMake(0, offset) animated:YES];
-//        [NSTimer scheduledTimerWithTimeInterval:duration
-//                                        repeats:false
-//                                          block:^(NSTimer * _Nonnull timer) {
-//                                              [self.tableView setContentOffset:CGPointMake(0, offset) animated:NO];
-//                                          }];
     }
     else
     {
-        //视图下沉恢复原状
-//        [UIView animateWithDuration:duration animations:^{
-//            self.uiview.frame = CGRectMake(0, 0, self.uiview.frame.size.width, self.uiview.frame.size.height);
-//        }];
         [self.tableView setContentOffset:CGPointMake(0, 0) animated:YES];
     }
     
@@ -290,7 +281,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGPoint offset = tableView.contentOffset;
     if(indexPath.row >= self.contentArray.count)
     {
         RandomListItem *tmp = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
@@ -307,17 +297,19 @@
         UITextField *textField = cell.contentView.subviews[0];
 
 
-        NSLog(@"%f %f", offset.x, offset.y);
+        NSLog(@"%f", self.currentOffset);
         
-        [tableView reloadData];
         //[tableView layoutIfNeeded]; // Force layout so things are updated before resetting the contentOffset.
         //[tableView setContentOffset:offset];
         
-        UITableViewScrollPosition *position;
-        [self.tableView selectRowAtIndexPath:indexPath
-                                    animated:true
-                              scrollPosition:UITableViewScrollPositionTop];
-        [tableView layoutIfNeeded];
+        if(self.currentOffset > 0)
+        {
+            [tableView reloadData];
+            [self.tableView selectRowAtIndexPath:indexPath
+                                        animated:true
+                                  scrollPosition:UITableViewScrollPositionTop];
+            [tableView layoutIfNeeded];
+        }
         [textField becomeFirstResponder];
     }
     else
