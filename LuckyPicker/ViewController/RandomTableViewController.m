@@ -98,6 +98,7 @@
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [self setNeedsStatusBarAppearanceUpdate];
 
+    [self.managedContext reset];//reset managedContext to discard unsaved changes
     self.contentArray = nil;
     [self.tableView reloadData];
 }
