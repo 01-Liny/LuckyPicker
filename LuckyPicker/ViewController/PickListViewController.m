@@ -81,10 +81,14 @@
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
     
-    UILabel *hourLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 53, 100, 100)];
-    hourLabel.font = [UIFont boldSystemFontOfSize:17];
-    hourLabel.text = @"quantity";
-    [self.pickerView addSubview:hourLabel];
+    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 53, 100, 100)];
+    quantityLabel.font = [UIFont boldSystemFontOfSize:17];
+    quantityLabel.textColor = [UIColor colorWithRed:1
+                                              green:1
+                                               blue:1
+                                              alpha:85.0/100];
+    quantityLabel.text = @"quantity";
+    [self.pickerView addSubview:quantityLabel];
     
     [self setupPickView];
     NSLog(@"DidLoad");
@@ -108,6 +112,9 @@
 {
     NSLog(@"Appear");
     [super viewWillAppear:true];
+    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    self.pickView.backgroundColor = [self colorWithHexString:@"#3B577D"];
+    
     [self updateUI];
 }
 
@@ -118,6 +125,7 @@
     self.title = self.randomListContent.title;
     self.numberMutableArray = nil;
     self.randomList = nil;
+    
     
     [self.pickerView reloadAllComponents];
     [self.pickerView selectRow:0
@@ -147,11 +155,11 @@
 {
     [UIView animateWithDuration:0.1
                      animations:^{
-                         self.pickView.backgroundColor = [self colorWithHexString:@"#A88B79"];
+                         self.pickView.backgroundColor = [self colorWithHexString:@"#6983ac"];
                      }completion:^(BOOL finished) {
                          [UIView animateWithDuration:0.5
                                           animations:^{
-                                              self.pickView.backgroundColor = [self colorWithHexString:@"#785E4D"];
+                                              self.pickView.backgroundColor = [self colorWithHexString:@"#3B577D"];
                                               
                                           }];
                      }];
@@ -269,6 +277,7 @@
 {
     UILabel *columnView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30,100)];
     columnView.font = [UIFont systemFontOfSize:24];
+    columnView.textColor = [self colorWithHexString:@"#FFFFFF"];
     columnView.text = self.numberMutableArray[row];
     columnView.textAlignment = NSTextAlignmentRight;
     

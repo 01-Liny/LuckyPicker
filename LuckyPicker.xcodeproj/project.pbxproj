@@ -49,6 +49,7 @@
 		F98634991E9E08890014DE7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98634971E9E08890014DE7D /* Main.storyboard */; };
 		F986349B1E9E08890014DE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F986349A1E9E08890014DE7D /* Assets.xcassets */; };
 		F986349E1E9E08890014DE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F986349C1E9E08890014DE7D /* LaunchScreen.storyboard */; };
+		F9D600711EADA07A0022F924 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D600701EADA07A0022F924 /* TabBarViewController.m */; };
 		F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2D91EA49DAD003305DB /* BSXUIView.m */; };
 		F9E2D2DD1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2DB1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m */; };
 		F9E2D2EE1EA4AA6C003305DB /* Random.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2ED1EA4AA6C003305DB /* Random.m */; };
@@ -119,6 +120,8 @@
 		F986349A1E9E08890014DE7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F986349D1E9E08890014DE7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F986349F1E9E08890014DE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D6006F1EADA07A0022F924 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
+		F9D600701EADA07A0022F924 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
 		F9E2D2D81EA49DAD003305DB /* BSXUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSXUIView.h; sourceTree = "<group>"; };
 		F9E2D2D91EA49DAD003305DB /* BSXUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSXUIView.m; sourceTree = "<group>"; };
 		F9E2D2DA1EA49DAD003305DB /* UIView+BSXMaterialAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSXMaterialAnimation.h"; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 				F98634921E9E08890014DE7D /* AppDelegate.m */,
 				F98634941E9E08890014DE7D /* ViewController.h */,
 				F98634951E9E08890014DE7D /* ViewController.m */,
+				F9D6006F1EADA07A0022F924 /* TabBarViewController.h */,
+				F9D600701EADA07A0022F924 /* TabBarViewController.m */,
 				F98634971E9E08890014DE7D /* Main.storyboard */,
 				F9E2D3591EA9FEC8003305DB /* List.xcdatamodeld */,
 				F986349A1E9E08890014DE7D /* Assets.xcassets */,
@@ -511,6 +516,7 @@
 				F9E2D3581EA9E8CF003305DB /* RandomTableViewController.m in Sources */,
 				F94C2A591E9FB54800E707D9 /* UIKit+Hero.swift in Sources */,
 				F9E2D3551EA84429003305DB /* RandomViewController.m in Sources */,
+				F9D600711EADA07A0022F924 /* TabBarViewController.m in Sources */,
 				F9E2D3C01EAAE359003305DB /* RandomListContent+CoreDataClass.m in Sources */,
 				F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
 				F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */,

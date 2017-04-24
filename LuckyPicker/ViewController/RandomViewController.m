@@ -32,6 +32,7 @@
 @property (assign, nonatomic) NSMutableArray *tmpNumberList;
 
 @property (strong, nonatomic) NSTimer *currentTimer;
+@property (strong, nonatomic) NSTimer *currentButtonTimer;
 @property (weak, nonatomic) UITextField *currentTextField;
 
 @property (strong, nonatomic) CAAnimationGroup *showAnimation;
@@ -123,7 +124,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    //[self setNeedsStatusBarAppearanceUpdate];
     [self setup];
 }
 
@@ -145,6 +148,7 @@
     //pickView
     self.pickView.layer.cornerRadius = 10;
     self.pickView.layer.masksToBounds = NO;
+    self.pickView.backgroundColor = [self colorWithHexString:@"#3B577D"];
     [self addShadow:self.pickView];
     
     //repeatButton
@@ -197,9 +201,14 @@
     [self.repeatButton.layer addAnimation:self.hideAnimation
                                    forKey:nil];
     [self setRepeatButton];
-    self.showAnimation.beginTime = CACurrentMediaTime() + 0.1;
-    [self.repeatButton.layer addAnimation:self.showAnimation
-                                   forKey:nil];
+    //self.showAnimation.beginTime =  0.1;
+    [self.currentButtonTimer invalidate];//防止多次调用
+    self.currentButtonTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
+                                                              repeats:false
+                                                                block:^(NSTimer * _Nonnull timer) {
+                                                                    [self.repeatButton.layer addAnimation:self.showAnimation
+                                                                                                   forKey:nil];
+                                                                }];
 }
 
 - (IBAction)pick:(id)sender
@@ -208,11 +217,11 @@
     
     [UIView animateWithDuration:0.1
                      animations:^{
-                         self.pickView.backgroundColor = [self colorWithHexString:@"#A88B79"];
+                         self.pickView.backgroundColor = [self colorWithHexString:@"#6983ac"];
                      }completion:^(BOOL finished) {
                          [UIView animateWithDuration:0.5
                                           animations:^{
-                                              self.pickView.backgroundColor = [self colorWithHexString:@"#785E4D"];
+                                              self.pickView.backgroundColor = [self colorWithHexString:@"#3B577D"];
                                               
                                           }];
                      }];

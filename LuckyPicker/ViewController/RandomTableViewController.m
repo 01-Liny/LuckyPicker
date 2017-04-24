@@ -93,11 +93,15 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"RandomTableView %@", NSStringFromSelector(_cmd));
     [super viewWillAppear:animated];
+    NSLog(@"RandomTableView %@", NSStringFromSelector(_cmd));
+    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self setNeedsStatusBarAppearanceUpdate];
+
     self.contentArray = nil;
     [self.tableView reloadData];
 }
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -137,6 +141,10 @@
     
     RandomListContent *tmp = [self.contentArray objectAtIndex:indexPath.row];
     cell.textLabel.text = tmp.title;
+    cell.textLabel.textColor = [UIColor colorWithRed:0
+                                               green:0
+                                                blue:0
+                                               alpha:1];
     
     
     //2.调整(iOS8以上)tableView边距
@@ -210,6 +218,13 @@
     
     [self.navigationController showViewController:destinationViewController
                                            sender:self];
+}
+
+#pragma mark - UIStatuesBarStyle
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 @end
