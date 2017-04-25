@@ -13,7 +13,7 @@
 @interface PickListViewController : UIViewController
 
 @property (strong, nonatomic) NSManagedObjectContext *managedContext;
-@property (strong, nonatomic) RandomListContent *randomListContent;
+@property (strong, nonatomic) NSManagedObjectID *randomListContentID;
 //@property (assign, nonatomic) NSInteger randomListContentIndex;
 
 @end

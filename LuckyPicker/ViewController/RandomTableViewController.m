@@ -99,6 +99,7 @@
     [self setNeedsStatusBarAppearanceUpdate];
 
     [self.managedContext reset];//reset managedContext to discard unsaved changes
+    
     self.contentArray = nil;
     [self.tableView reloadData];
 }
@@ -214,7 +215,8 @@
 {
     PickListViewController *destinationViewController = [self.storyboard instantiateViewControllerWithIdentifier:PickListViewControllerIdentifier];
     
-    destinationViewController.randomListContent = self.contentArray[indexPath.row];
+    RandomListContent *content = self.contentArray[indexPath.row];
+    destinationViewController.randomListContentID = content.objectID;
     destinationViewController.managedContext = self.managedContext;
     
     [self.navigationController showViewController:destinationViewController

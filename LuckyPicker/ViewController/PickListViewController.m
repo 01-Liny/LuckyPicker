@@ -21,6 +21,7 @@
 
 @property (strong, nonatomic) NSTimer *currentTimer;
 
+@property (strong, nonatomic) RandomListContent *randomListContent;
 @property (strong, nonatomic) NSMutableArray *numberMutableArray;
 @property (strong, nonatomic) RandomList *randomList;
 @property (assign, nonatomic) NSInteger maxQuantity;
@@ -31,18 +32,14 @@
 
 #pragma mark - lazy instantiation
 
-//- (RandomListContent*)randomListContent
-//{
-//    if(!_randomListContent)
-//    {
-//        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RandomListContent"];
-//        NSError *error = nil;
-//        NSArray *allContent = [self.managedContext executeFetchRequest:request
-//                                                                 error:&error];
-//        _randomListContent = allContent[self.randomListContentIndex];
-//    }
-//    return _randomListContent;
-//}
+- (RandomListContent*)randomListContent
+{
+    if(!_randomListContent)
+    {
+        _randomListContent = [self.managedContext objectWithID:self.randomListContentID];
+    }
+    return _randomListContent;
+}
 
 - (RandomList *)randomList
 {
@@ -115,6 +112,9 @@
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.pickView.backgroundColor = [self colorWithHexString:@"#3B577D"];
     
+    [self.managedContext reset];//reset managedContext to discard unsaved changes
+    self.randomListContent = nil;
+    
     [self updateUI];
 }
 
@@ -123,6 +123,7 @@
     //reload use lazy instantiation
     //self.randomListContent = nil;
     self.title = self.randomListContent.title;
+    
     self.numberMutableArray = nil;
     self.randomList = nil;
     
