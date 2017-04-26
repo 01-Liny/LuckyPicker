@@ -78,7 +78,7 @@
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
     
-    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 53, 100, 100)];
+    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
     quantityLabel.font = [UIFont boldSystemFontOfSize:17];
     quantityLabel.textColor = [UIColor colorWithRed:1
                                               green:1
