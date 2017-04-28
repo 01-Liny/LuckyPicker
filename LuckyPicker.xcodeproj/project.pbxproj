@@ -43,6 +43,8 @@
 		F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A4A1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift */; };
 		F94C2A6F1E9FB54800E707D9 /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A4B1E9FB54800E707D9 /* MatchPreprocessor.swift */; };
 		F94C2A701E9FB54800E707D9 /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C2A4C1E9FB54800E707D9 /* SourcePreprocessor.swift */; };
+		F9547B7A1EB2D3FD0056F67D /* DiceSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9547B791EB2D3FD0056F67D /* DiceSwitchViewController.m */; };
+		F9547B7D1EB2D6870056F67D /* PickDiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9547B7C1EB2D6870056F67D /* PickDiceViewController.m */; };
 		F98634901E9E08890014DE7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F986348F1E9E08890014DE7D /* main.m */; };
 		F98634931E9E08890014DE7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F98634921E9E08890014DE7D /* AppDelegate.m */; };
 		F98634961E9E08890014DE7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98634951E9E08890014DE7D /* ViewController.m */; };
@@ -110,6 +112,10 @@
 		F94C2A4A1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgnoreSubviewModifiersPreprocessor.swift; sourceTree = "<group>"; };
 		F94C2A4B1E9FB54800E707D9 /* MatchPreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchPreprocessor.swift; sourceTree = "<group>"; };
 		F94C2A4C1E9FB54800E707D9 /* SourcePreprocessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourcePreprocessor.swift; sourceTree = "<group>"; };
+		F9547B781EB2D3FD0056F67D /* DiceSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiceSwitchViewController.h; path = ViewController/DiceSwitchViewController.h; sourceTree = "<group>"; };
+		F9547B791EB2D3FD0056F67D /* DiceSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiceSwitchViewController.m; path = ViewController/DiceSwitchViewController.m; sourceTree = "<group>"; };
+		F9547B7B1EB2D6870056F67D /* PickDiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickDiceViewController.h; path = ViewController/PickDiceViewController.h; sourceTree = "<group>"; };
+		F9547B7C1EB2D6870056F67D /* PickDiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickDiceViewController.m; path = ViewController/PickDiceViewController.m; sourceTree = "<group>"; };
 		F986348B1E9E08890014DE7D /* LuckyPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F986348F1E9E08890014DE7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F98634911E9E08890014DE7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -258,6 +264,17 @@
 			path = Preprocessors;
 			sourceTree = "<group>";
 		};
+		F9547B771EB2D31E0056F67D /* PickDice-Cast */ = {
+			isa = PBXGroup;
+			children = (
+				F9547B7B1EB2D6870056F67D /* PickDiceViewController.h */,
+				F9547B7C1EB2D6870056F67D /* PickDiceViewController.m */,
+				F9547B781EB2D3FD0056F67D /* DiceSwitchViewController.h */,
+				F9547B791EB2D3FD0056F67D /* DiceSwitchViewController.m */,
+			);
+			name = "PickDice-Cast";
+			sourceTree = "<group>";
+		};
 		F98634821E9E08890014DE7D = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +383,7 @@
 			children = (
 				F9E2D3531EA84429003305DB /* RandomViewController.h */,
 				F9E2D3541EA84429003305DB /* RandomViewController.m */,
+				F9547B771EB2D31E0056F67D /* PickDice-Cast */,
 				F9E2D3C21EAAF136003305DB /* RandomListController */,
 			);
 			name = ViewController;
@@ -477,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9E2D3C51EAAF173003305DB /* AddContentViewController.m in Sources */,
+				F9547B7D1EB2D6870056F67D /* PickDiceViewController.m in Sources */,
 				F94C2A4F1E9FB54800E707D9 /* HeroDefaultAnimator.swift in Sources */,
 				F94C2A6A1E9FB54800E707D9 /* Regex.swift in Sources */,
 				F94C2A6D1E9FB54800E707D9 /* DurationPreprocessor.swift in Sources */,
@@ -503,6 +522,7 @@
 				F9E2D2DD1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m in Sources */,
 				F94C2A5D1E9FB54800E707D9 /* HeroBaseController.swift in Sources */,
 				F94C2A701E9FB54800E707D9 /* SourcePreprocessor.swift in Sources */,
+				F9547B7A1EB2D3FD0056F67D /* DiceSwitchViewController.m in Sources */,
 				F9E2D3BE1EAAE359003305DB /* RandomListItem+CoreDataClass.m in Sources */,
 				F94C2A501E9FB54800E707D9 /* HeroViewPropertyViewContext.swift in Sources */,
 				F94C2A571E9FB54800E707D9 /* CG+Hero.swift in Sources */,
