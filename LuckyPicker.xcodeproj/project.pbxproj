@@ -52,6 +52,7 @@
 		F986349B1E9E08890014DE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F986349A1E9E08890014DE7D /* Assets.xcassets */; };
 		F986349E1E9E08890014DE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F986349C1E9E08890014DE7D /* LaunchScreen.storyboard */; };
 		F9D600711EADA07A0022F924 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D600701EADA07A0022F924 /* TabBarViewController.m */; };
+		F9DE25021EB46FF500C231C6 /* CastLotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DE25011EB46FF500C231C6 /* CastLotsViewController.m */; };
 		F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2D91EA49DAD003305DB /* BSXUIView.m */; };
 		F9E2D2DD1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2DB1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m */; };
 		F9E2D2EE1EA4AA6C003305DB /* Random.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2ED1EA4AA6C003305DB /* Random.m */; };
@@ -128,6 +129,8 @@
 		F986349F1E9E08890014DE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9D6006F1EADA07A0022F924 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
 		F9D600701EADA07A0022F924 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
+		F9DE25001EB46FF500C231C6 /* CastLotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CastLotsViewController.h; path = ViewController/CastLotsViewController.h; sourceTree = "<group>"; };
+		F9DE25011EB46FF500C231C6 /* CastLotsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CastLotsViewController.m; path = ViewController/CastLotsViewController.m; sourceTree = "<group>"; };
 		F9E2D2D81EA49DAD003305DB /* BSXUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSXUIView.h; sourceTree = "<group>"; };
 		F9E2D2D91EA49DAD003305DB /* BSXUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSXUIView.m; sourceTree = "<group>"; };
 		F9E2D2DA1EA49DAD003305DB /* UIView+BSXMaterialAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSXMaterialAnimation.h"; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 		F9547B771EB2D31E0056F67D /* PickDice-Cast */ = {
 			isa = PBXGroup;
 			children = (
+				F9DE25001EB46FF500C231C6 /* CastLotsViewController.h */,
+				F9DE25011EB46FF500C231C6 /* CastLotsViewController.m */,
 				F9547B7B1EB2D6870056F67D /* PickDiceViewController.h */,
 				F9547B7C1EB2D6870056F67D /* PickDiceViewController.m */,
 				F9547B781EB2D3FD0056F67D /* DiceSwitchViewController.h */,
@@ -523,6 +528,7 @@
 				F94C2A5D1E9FB54800E707D9 /* HeroBaseController.swift in Sources */,
 				F94C2A701E9FB54800E707D9 /* SourcePreprocessor.swift in Sources */,
 				F9547B7A1EB2D3FD0056F67D /* DiceSwitchViewController.m in Sources */,
+				F9DE25021EB46FF500C231C6 /* CastLotsViewController.m in Sources */,
 				F9E2D3BE1EAAE359003305DB /* RandomListItem+CoreDataClass.m in Sources */,
 				F94C2A501E9FB54800E707D9 /* HeroViewPropertyViewContext.swift in Sources */,
 				F94C2A571E9FB54800E707D9 /* CG+Hero.swift in Sources */,

@@ -517,13 +517,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNZ-Fv-cHR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djN-Uj-0of">
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djN-Uj-0of" userLabel="Cast Ui View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <connections>
-                                            <segue destination="oIb-K7-a4x" kind="embed" id="eFA-j8-kxx"/>
+                                            <segue destination="S7A-tT-fkI" kind="embed" id="3Se-be-0hk"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTm-Ug-Hoy">
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTm-Ug-Hoy" userLabel="Dice Ui View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <connections>
                                             <segue destination="Zmj-Se-iZf" kind="embed" id="vpS-Sf-jll"/>
@@ -710,7 +710,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vNO-6w-dzK" userLabel="Pick">
-                                <rect key="frame" x="112" y="333.5" width="151" height="54.5"/>
+                                <rect key="frame" x="112" y="334" width="151" height="54"/>
                                 <color key="backgroundColor" red="1" green="0.51764705879999995" blue="0.14901960780000001" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -766,30 +766,82 @@
             </objects>
             <point key="canvasLocation" x="-4293.6000000000004" y="132.23388305847078"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="2n3-Cv-Pdb">
+        <!--Cast Lots View Controller-->
+        <scene sceneID="sIb-0t-MO4">
             <objects>
-                <viewController id="oIb-K7-a4x" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gh-HK-LfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="S7A-tT-fkI" customClass="CastLotsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Zcf-dS-gcc"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZDc-U4-efy"/>
+                        <viewControllerLayoutGuide type="top" id="48A-ko-iVV"/>
+                        <viewControllerLayoutGuide type="bottom" id="luC-75-13y"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MFV-vS-lba">
+                    <view key="view" contentMode="scaleToFill" id="GdD-SI-qVA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvg-cn-hTw">
-                                <rect key="frame" x="164" y="255" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgz-38-yxa">
+                                <rect key="frame" x="0.0" y="388" width="375" height="166"/>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AO3-f8-1DF">
+                                <rect key="frame" x="32" y="8" width="311" height="311"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press The Pick" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnu-Te-wSN">
+                                        <rect key="frame" x="68" y="33" width="175" height="245"/>
+                                        <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="70"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AO3-f8-1DF" secondAttribute="height" multiplier="1:1" id="IXO-Pg-foV"/>
+                                    <constraint firstItem="Bnu-Te-wSN" firstAttribute="centerY" secondItem="AO3-f8-1DF" secondAttribute="centerY" id="f2V-rz-1wx"/>
+                                    <constraint firstItem="Bnu-Te-wSN" firstAttribute="centerX" secondItem="AO3-f8-1DF" secondAttribute="centerX" id="tNO-aB-Nws"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="USH-S3-BeW" userLabel="Pick">
+                                <rect key="frame" x="112" y="333.5" width="151" height="54.5"/>
+                                <color key="backgroundColor" red="1" green="0.51764705879999995" blue="0.14901960780000001" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Pick">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="24" name=".SFNSText"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="pick:" destination="S7A-tT-fkI" eventType="touchUpInside" id="lIx-14-JH1"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2666666667" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="USH-S3-BeW" firstAttribute="centerX" secondItem="AO3-f8-1DF" secondAttribute="centerX" id="8IU-Ts-bq6"/>
+                            <constraint firstAttribute="trailing" secondItem="Pgz-38-yxa" secondAttribute="trailing" id="BYs-3y-qMm"/>
+                            <constraint firstItem="Pgz-38-yxa" firstAttribute="height" secondItem="GdD-SI-qVA" secondAttribute="height" multiplier="0.3" id="WuG-fX-bkp"/>
+                            <constraint firstItem="Pgz-38-yxa" firstAttribute="leading" secondItem="GdD-SI-qVA" secondAttribute="leading" id="YhN-7a-Rh9"/>
+                            <constraint firstItem="AO3-f8-1DF" firstAttribute="leading" secondItem="GdD-SI-qVA" secondAttribute="leadingMargin" multiplier="2" id="fzj-yS-46I"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Pgz-38-yxa" secondAttribute="bottom" id="gZa-X8-6gN"/>
+                            <constraint firstItem="Pgz-38-yxa" firstAttribute="top" secondItem="USH-S3-BeW" secondAttribute="bottom" id="hry-tS-GQw"/>
+                            <constraint firstItem="AO3-f8-1DF" firstAttribute="top" secondItem="48A-ko-iVV" secondAttribute="bottom" multiplier="2" constant="8" symbolic="YES" id="i30-ge-qSH"/>
+                            <constraint firstItem="USH-S3-BeW" firstAttribute="leading" secondItem="GdD-SI-qVA" secondAttribute="leadingMargin" constant="96" id="kzf-K6-sYE"/>
+                            <constraint firstItem="USH-S3-BeW" firstAttribute="top" secondItem="AO3-f8-1DF" secondAttribute="bottom" multiplier="1.02" constant="8" symbolic="YES" id="ndY-4g-HAs"/>
+                            <constraint firstItem="AO3-f8-1DF" firstAttribute="centerX" secondItem="GdD-SI-qVA" secondAttribute="centerX" id="y8a-gq-5a1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="annotationLabel" destination="Bnu-Te-wSN" id="Jjw-xA-Rdj"/>
+                        <outlet property="diceView" destination="AO3-f8-1DF" id="hoN-La-jTw"/>
+                        <outlet property="pickButton" destination="USH-S3-BeW" id="oO3-xA-1bC"/>
+                        <outlet property="pickerView" destination="Pgz-38-yxa" id="wTl-Gt-JSq"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uEP-TX-FPp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4292" y="869"/>
+            <point key="canvasLocation" x="-4294" y="768"/>
         </scene>
     </scenes>
     <resources>

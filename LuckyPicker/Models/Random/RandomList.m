@@ -29,12 +29,14 @@
 
 - (void)setQuantity:(NSInteger)quantity
 {
-    NSInteger offset = abs(self.fromValue - self.toValue) + 1;
-    if(quantity > offset)
-        _quantity = offset;//prevent quantity bigger than offset
-
-    else
-        _quantity = quantity;
+//    NSInteger offset = abs(self.fromValue - self.toValue) + 1;
+//    if(quantity > offset)
+//        _quantity = offset;//prevent quantity bigger than offset
+//
+//    else
+//        _quantity = quantity;
+    
+    _quantity = quantity;
 }
 
 #pragma mark - init
