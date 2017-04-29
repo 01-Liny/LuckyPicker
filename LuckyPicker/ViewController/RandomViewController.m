@@ -145,17 +145,6 @@
     self.fromTextField.delegate = self;
     self.toTextField.delegate = self;
     
-    //pickView
-    self.pickView.layer.cornerRadius = 10;
-    self.pickView.layer.masksToBounds = NO;
-    self.pickView.backgroundColor = [self colorWithHexString:@"#3B577D"];
-    [self addShadow:self.pickView];
-    
-    //repeatButton
-    self.repeatButton.layer.cornerRadius = 5;
-    self.repeatButton.layer.masksToBounds = NO;
-    [self addShadow:self.repeatButton];
-    
     //pickButton
     self.pickButton.frame = self.pickView.frame;
     
@@ -171,6 +160,22 @@
                                              selector:@selector(keyboardWillHidden:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    //pickView
+    self.pickView.layer.cornerRadius = 10;
+    self.pickView.layer.masksToBounds = NO;
+    self.pickView.backgroundColor = [self colorWithHexString:@"#3B577D"];
+    [self addShadow:self.pickView];
+    
+    //repeatButton
+    self.repeatButton.layer.cornerRadius = 5;
+    self.repeatButton.layer.masksToBounds = NO;
+    [self addShadow:self.repeatButton];
 }
 
 - (void)addShadow:(UIView*)view

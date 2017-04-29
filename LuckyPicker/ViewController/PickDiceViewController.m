@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *pickButton;
 
 @property (weak, nonatomic) IBOutlet UIView *diceView;
+@property (weak, nonatomic) IBOutlet UILabel *annotationLabel;
 
 @property (strong, nonatomic) NSMutableArray *quantityMutableArray;
 @property (strong, nonatomic) NSMutableArray *numberMutableArray;
@@ -148,16 +149,50 @@
     
     [self setup];
     
+    //select item when start
     [self.pickerView selectRow:0 inComponent:0 animated:true];
     [self.pickerView selectRow:5 inComponent:1 animated:true];
     self.quantity = 1;
     self.random.toValue = 6;
     
     self.isPicking = false;
+    
+    self.diceView.backgroundColor = [UIColor clearColor];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    //pickButton add shadow
+    [self addShadow:self.pickButton];
+    self.pickButton.layer.cornerRadius = 5;
+    
+#warning magic code
+    //pickerView label
+    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/3.0 -109, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+    quantityLabel.font = [UIFont boldSystemFontOfSize:17];
+    quantityLabel.textColor = [UIColor colorWithRed:1
+                                              green:1
+                                               blue:1
+                                              alpha:85.0/100];
+    quantityLabel.text = @"quantity";
+    [self.pickerView addSubview:quantityLabel];
+    
+    UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/3.0*2 +40, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+    numberLabel.font = [UIFont boldSystemFontOfSize:17];
+    numberLabel.textColor = [UIColor colorWithRed:1
+                                            green:1
+                                             blue:1
+                                            alpha:85.0/100];
+    numberLabel.text = @"number";
+    [self.pickerView addSubview:numberLabel];
 }
 
 - (void)setup
 {
+    //generate Dice
     self.uiviewArray = [[NSMutableArray alloc] init];
     self.buttonArray = [[NSMutableArray alloc] init];
     
@@ -179,7 +214,9 @@
         }
         NSLog(@"x y:%f %f",x,y);
         UIView *tmpView = [[UIView alloc] initWithFrame:CGRectMake(x, y, width, width)];
-        tmpView.backgroundColor = [UIColor blueColor];
+        tmpView.backgroundColor = [self colorWithHexString:@"#3B577D"];
+        tmpView.layer.masksToBounds = NO;
+        
         UIButton *tmpButton = [[UIButton alloc] initWithFrame:tmpView.frame];
         
         //渲染图片时用
@@ -214,6 +251,7 @@
 
 - (IBAction)pick:(UIButton *)sender
 {
+    self.annotationLabel.text = @"";
 #warning need restructure
     CAKeyframeAnimation *morphX = [[CAKeyframeAnimation alloc] init];
     morphX.keyPath = @"transform.scale.x";
@@ -278,11 +316,11 @@
     UIView *tmpUiView = sender.superview;
     [UIView animateWithDuration:0.1
                      animations:^{
-                         tmpUiView.backgroundColor = [self colorWithHexString:@"69DBFF"];
+                         tmpUiView.backgroundColor = [self colorWithHexString:@"#6983ac"];
                      }completion:^(BOOL finished) {
                          [UIView animateWithDuration:0.5
                                           animations:^{
-                                              tmpUiView.backgroundColor = [self colorWithHexString:@"279CEB"];
+                                              tmpUiView.backgroundColor = [self colorWithHexString:@"#3B577D"];
                                               
                                           }];
                      }];
@@ -379,6 +417,12 @@
             NSLog(@"x: %f y: %f",x,y);
             
             tmpView.frame = CGRectMake(x, y, width, width);
+            if(quantity==1)
+                tmpView.layer.cornerRadius = 10;
+            else
+                tmpView.layer.cornerRadius = 5;
+            //redraw uiview shadow
+            [self addShadow:tmpView];
             tmpButton.frame = tmpView.bounds;
             
             if(tmpView.hidden == false)
@@ -426,9 +470,6 @@
     
     [sender setTitle:[NSString stringWithFormat:@"%ld",tmp]  forState:UIControlStateNormal];
     sender.titleLabel.adjustsFontSizeToFitWidth = true;
-    
-    NSInteger index = [self.buttonArray indexOfObject:sender];
-        
 }
 
 #pragma mark - <UIPickerViewDataSource>
@@ -455,23 +496,37 @@
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
     UIView * newView = [[UIView alloc] init];
+    //newView.backgroundColor = [UIColor blueColor];
     UILabel *lbl = [[UILabel alloc] init];
     lbl.translatesAutoresizingMaskIntoConstraints = NO;
     //lbl.backgroundColor = [UIColor redColor];
     lbl.textAlignment = NSTextAlignmentRight;
     lbl.font=[UIFont systemFontOfSize:24];
+    lbl.textColor = [self colorWithHexString:@"#FFFFFF"];
     [newView addSubview:lbl];
     
-    [newView addConstraint:[NSLayoutConstraint constraintWithItem:lbl attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:newView attribute:NSLayoutAttributeLeft multiplier:1 constant:0]];
+
     [newView addConstraint:[NSLayoutConstraint constraintWithItem:lbl attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:newView attribute:NSLayoutAttributeWidth multiplier:0.5 constant:0]];
     [newView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[lbl]|" options:0 metrics:nil views:@{@"lbl":lbl}]];
     
     if(component == 0)
     {
+        [newView addConstraint:[NSLayoutConstraint constraintWithItem:lbl
+                                                            attribute:NSLayoutAttributeLeft
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:newView
+                                                            attribute:NSLayoutAttributeLeft
+                                                           multiplier:1 constant:10]];
         lbl.text = self.quantityMutableArray[row];
     }
     else
     {
+        [newView addConstraint:[NSLayoutConstraint constraintWithItem:lbl
+                                                            attribute:NSLayoutAttributeLeft
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:newView
+                                                            attribute:NSLayoutAttributeLeft
+                                                           multiplier:1 constant:0]];
         lbl.text = self.numberMutableArray[row];
     }
     

@@ -78,26 +78,12 @@
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
     
-    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
-    quantityLabel.font = [UIFont boldSystemFontOfSize:17];
-    quantityLabel.textColor = [UIColor colorWithRed:1
-                                              green:1
-                                               blue:1
-                                              alpha:85.0/100];
-    quantityLabel.text = @"quantity";
-    [self.pickerView addSubview:quantityLabel];
-    
     [self setupPickView];
     NSLog(@"DidLoad");
 }
 
 - (void)setupPickView
 {
-    //pickView
-    self.pickView.layer.cornerRadius = 10;
-    self.pickView.layer.masksToBounds = NO;
-    [self addShadow:self.pickView];
-    
     //pickButton
     self.pickButton.frame = self.pickView.frame;
     
@@ -116,6 +102,26 @@
     self.randomListContent = nil;
     
     [self updateUI];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    //pickView
+    self.pickView.layer.cornerRadius = 10;
+    self.pickView.layer.masksToBounds = NO;
+    [self addShadow:self.pickView];
+    
+    //add quantity label
+    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+    quantityLabel.font = [UIFont boldSystemFontOfSize:17];
+    quantityLabel.textColor = [UIColor colorWithRed:1
+                                              green:1
+                                               blue:1
+                                              alpha:85.0/100];
+    quantityLabel.text = @"quantity";
+    [self.pickerView addSubview:quantityLabel];
 }
 
 - (void)updateUI

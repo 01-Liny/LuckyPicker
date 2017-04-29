@@ -200,7 +200,7 @@
     //double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
     //将视图上移计算好的偏移
-    if(offset > 0)
+    if(offset > -self.currentTextField.frame.size.height)
     {
         [self.tableView setContentOffset:CGPointMake(0, offset) animated:YES];
     }
@@ -323,8 +323,11 @@
         
         //[tableView layoutIfNeeded]; // Force layout so things are updated before resetting the contentOffset.
         //[tableView setContentOffset:offset];
-        
-        if(self.currentOffset > 0)
+
+#warning magic code
+        //添加cell时，下移一格
+        //这里的-30应该是cell的负高度值，参考keyboardWillShow()的offset判断
+        if(self.currentOffset > -30)
         {
             [tableView reloadData];
             [self.tableView selectRowAtIndexPath:indexPath
