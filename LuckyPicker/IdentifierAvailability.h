@@ -18,4 +18,7 @@
 #define RandomListContentSortKey @"title"
 #define RandomListItemSortKey @"name"
 
+#define MaterialColorValueKey @"ColorValue"
+#define MaterialColorNameKey @"ColorName"
+
 #endif /* IdentifierAvailability_h */

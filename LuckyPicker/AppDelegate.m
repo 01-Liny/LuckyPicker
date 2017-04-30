@@ -10,6 +10,8 @@
 #import <CoreData/CoreData.h>
 #import "RandomListContent+CoreDataClass.h"
 #import "RandomListItem+CoreDataClass.h"
+#import "NSString+Hex.h"
+#import "UIColor+Hex.h"
 
 @interface AppDelegate ()
 
@@ -34,7 +36,10 @@
 //        [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"isFirstRun"];
 //    }
 //    [defaults synchronize];
-    
+    NSLog(@"%@", [NSString hexStringWithUIColor:[UIColor blackColor]]);
+    NSLog(@"%@", [NSString hexStringWithUIColor:[UIColor whiteColor]]);
+    NSLog(@"%@", [NSString hexStringWithUIColor:[UIColor redColor]]);
+    NSLog(@"%@", [NSString hexStringWithUIColor:[UIColor colorWithHexString:@"AAAAAA"]]);
     
     //1、创建模型对象
     //获取模型路径

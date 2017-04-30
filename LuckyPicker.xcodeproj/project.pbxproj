@@ -51,6 +51,10 @@
 		F98634991E9E08890014DE7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98634971E9E08890014DE7D /* Main.storyboard */; };
 		F986349B1E9E08890014DE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F986349A1E9E08890014DE7D /* Assets.xcassets */; };
 		F986349E1E9E08890014DE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F986349C1E9E08890014DE7D /* LaunchScreen.storyboard */; };
+		F9A25D821EB5720C00E2B1D3 /* ColorSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A25D811EB5720C00E2B1D3 /* ColorSwitchViewController.m */; };
+		F9A25D851EB5740D00E2B1D3 /* PickColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A25D841EB5740D00E2B1D3 /* PickColorViewController.m */; };
+		F9A25D891EB57DD900E2B1D3 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A25D881EB57DD900E2B1D3 /* UIColor+Hex.m */; };
+		F9A25D8C1EB5829000E2B1D3 /* NSString+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A25D8B1EB5829000E2B1D3 /* NSString+Hex.m */; };
 		F9D600711EADA07A0022F924 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D600701EADA07A0022F924 /* TabBarViewController.m */; };
 		F9DE25021EB46FF500C231C6 /* CastLotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DE25011EB46FF500C231C6 /* CastLotsViewController.m */; };
 		F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2D91EA49DAD003305DB /* BSXUIView.m */; };
@@ -127,6 +131,14 @@
 		F986349A1E9E08890014DE7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F986349D1E9E08890014DE7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F986349F1E9E08890014DE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9A25D801EB5720C00E2B1D3 /* ColorSwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorSwitchViewController.h; path = ViewController/ColorSwitchViewController.h; sourceTree = "<group>"; };
+		F9A25D811EB5720C00E2B1D3 /* ColorSwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorSwitchViewController.m; path = ViewController/ColorSwitchViewController.m; sourceTree = "<group>"; };
+		F9A25D831EB5740D00E2B1D3 /* PickColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickColorViewController.h; path = ViewController/PickColorViewController.h; sourceTree = "<group>"; };
+		F9A25D841EB5740D00E2B1D3 /* PickColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickColorViewController.m; path = ViewController/PickColorViewController.m; sourceTree = "<group>"; };
+		F9A25D871EB57DD900E2B1D3 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "Models/Color/UIColor+Hex.h"; sourceTree = "<group>"; };
+		F9A25D881EB57DD900E2B1D3 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "Models/Color/UIColor+Hex.m"; sourceTree = "<group>"; };
+		F9A25D8A1EB5829000E2B1D3 /* NSString+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Hex.h"; path = "Models/Color/NSString+Hex.h"; sourceTree = "<group>"; };
+		F9A25D8B1EB5829000E2B1D3 /* NSString+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Hex.m"; path = "Models/Color/NSString+Hex.m"; sourceTree = "<group>"; };
 		F9D6006F1EADA07A0022F924 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
 		F9D600701EADA07A0022F924 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
 		F9DE25001EB46FF500C231C6 /* CastLotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CastLotsViewController.h; path = ViewController/CastLotsViewController.h; sourceTree = "<group>"; };
@@ -330,6 +342,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F9A25D7C1EB5706D00E2B1D3 /* PickColor-Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				F9A25D801EB5720C00E2B1D3 /* ColorSwitchViewController.h */,
+				F9A25D811EB5720C00E2B1D3 /* ColorSwitchViewController.m */,
+				F9A25D831EB5740D00E2B1D3 /* PickColorViewController.h */,
+				F9A25D841EB5740D00E2B1D3 /* PickColorViewController.m */,
+			);
+			name = "PickColor-Passcode";
+			sourceTree = "<group>";
+		};
+		F9A25D861EB57D6400E2B1D3 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				F9A25D871EB57DD900E2B1D3 /* UIColor+Hex.h */,
+				F9A25D881EB57DD900E2B1D3 /* UIColor+Hex.m */,
+				F9A25D8A1EB5829000E2B1D3 /* NSString+Hex.h */,
+				F9A25D8B1EB5829000E2B1D3 /* NSString+Hex.m */,
+			);
+			name = Color;
+			sourceTree = "<group>";
+		};
 		F9E2D2D71EA49DAD003305DB /* BSXMaterialAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +378,7 @@
 		F9E2D2EA1EA4AA36003305DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F9A25D861EB57D6400E2B1D3 /* Color */,
 				F9E2D35D1EAA06FB003305DB /* Database */,
 				F9E2D2EB1EA4AA49003305DB /* Random */,
 			);
@@ -388,6 +423,7 @@
 			children = (
 				F9E2D3531EA84429003305DB /* RandomViewController.h */,
 				F9E2D3541EA84429003305DB /* RandomViewController.m */,
+				F9A25D7C1EB5706D00E2B1D3 /* PickColor-Passcode */,
 				F9547B771EB2D31E0056F67D /* PickDice-Cast */,
 				F9E2D3C21EAAF136003305DB /* RandomListController */,
 			);
@@ -513,6 +549,7 @@
 				F9E2D3C11EAAE359003305DB /* RandomListContent+CoreDataProperties.m in Sources */,
 				F94C2A561E9FB54800E707D9 /* CAMediaTimingFunction+Hero.swift in Sources */,
 				F94C2A601E9FB54800E707D9 /* HeroModifier+HeroStringConvertible.swift in Sources */,
+				F9A25D821EB5720C00E2B1D3 /* ColorSwitchViewController.m in Sources */,
 				F98634961E9E08890014DE7D /* ViewController.m in Sources */,
 				F94C2A551E9FB54800E707D9 /* CALayer+Hero.swift in Sources */,
 				F94C2A6F1E9FB54800E707D9 /* MatchPreprocessor.swift in Sources */,
@@ -525,8 +562,10 @@
 				F94C2A5C1E9FB54800E707D9 /* Hero.swift in Sources */,
 				F94C2A521E9FB54800E707D9 /* HeroDebugView.swift in Sources */,
 				F9E2D2DD1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m in Sources */,
+				F9A25D891EB57DD900E2B1D3 /* UIColor+Hex.m in Sources */,
 				F94C2A5D1E9FB54800E707D9 /* HeroBaseController.swift in Sources */,
 				F94C2A701E9FB54800E707D9 /* SourcePreprocessor.swift in Sources */,
+				F9A25D851EB5740D00E2B1D3 /* PickColorViewController.m in Sources */,
 				F9547B7A1EB2D3FD0056F67D /* DiceSwitchViewController.m in Sources */,
 				F9DE25021EB46FF500C231C6 /* CastLotsViewController.m in Sources */,
 				F9E2D3BE1EAAE359003305DB /* RandomListItem+CoreDataClass.m in Sources */,
@@ -545,6 +584,7 @@
 				F9D600711EADA07A0022F924 /* TabBarViewController.m in Sources */,
 				F9E2D3C01EAAE359003305DB /* RandomListContent+CoreDataClass.m in Sources */,
 				F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
+				F9A25D8C1EB5829000E2B1D3 /* NSString+Hex.m in Sources */,
 				F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */,
 				F94C2A611E9FB54800E707D9 /* HeroModifier.swift in Sources */,
 				F94C2A641E9FB54800E707D9 /* HeroTargetState.swift in Sources */,

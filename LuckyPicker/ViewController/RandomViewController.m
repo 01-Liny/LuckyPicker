@@ -9,7 +9,8 @@
 #import "RandomViewController.h"
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#include "RandomList.h"
+#import "RandomList.h"
+#import "UIColor+Hex.h"
 
 @interface RandomViewController () <UITextFieldDelegate>
 
@@ -145,9 +146,6 @@
     self.fromTextField.delegate = self;
     self.toTextField.delegate = self;
     
-    //pickButton
-    self.pickButton.frame = self.pickView.frame;
-    
     //numberLabel
     self.numberLabel.adjustsFontSizeToFitWidth = YES;
     
@@ -166,10 +164,13 @@
 {
     [super viewDidAppear:animated];
     
+    //pickButton
+    self.pickButton.frame = self.pickView.frame;
+    
     //pickView
     self.pickView.layer.cornerRadius = 10;
     self.pickView.layer.masksToBounds = NO;
-    self.pickView.backgroundColor = [self colorWithHexString:@"#3B577D"];
+    self.pickView.backgroundColor = [UIColor colorWithHexString:@"#3B577D"];
     [self addShadow:self.pickView];
     
     //repeatButton
