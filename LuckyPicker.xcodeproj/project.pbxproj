@@ -55,6 +55,7 @@
 		F9A25D851EB5740D00E2B1D3 /* PickColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A25D841EB5740D00E2B1D3 /* PickColorViewController.m */; };
 		F9A25D891EB57DD900E2B1D3 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A25D881EB57DD900E2B1D3 /* UIColor+Hex.m */; };
 		F9A25D8C1EB5829000E2B1D3 /* NSString+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A25D8B1EB5829000E2B1D3 /* NSString+Hex.m */; };
+		F9A25D8F1EB5DBD700E2B1D3 /* PickPasscodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A25D8E1EB5DBD700E2B1D3 /* PickPasscodeViewController.m */; };
 		F9D600711EADA07A0022F924 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D600701EADA07A0022F924 /* TabBarViewController.m */; };
 		F9DE25021EB46FF500C231C6 /* CastLotsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DE25011EB46FF500C231C6 /* CastLotsViewController.m */; };
 		F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D2D91EA49DAD003305DB /* BSXUIView.m */; };
@@ -139,6 +140,8 @@
 		F9A25D881EB57DD900E2B1D3 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "Models/Color/UIColor+Hex.m"; sourceTree = "<group>"; };
 		F9A25D8A1EB5829000E2B1D3 /* NSString+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Hex.h"; path = "Models/Color/NSString+Hex.h"; sourceTree = "<group>"; };
 		F9A25D8B1EB5829000E2B1D3 /* NSString+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Hex.m"; path = "Models/Color/NSString+Hex.m"; sourceTree = "<group>"; };
+		F9A25D8D1EB5DBD700E2B1D3 /* PickPasscodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PickPasscodeViewController.h; path = ViewController/PickPasscodeViewController.h; sourceTree = "<group>"; };
+		F9A25D8E1EB5DBD700E2B1D3 /* PickPasscodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickPasscodeViewController.m; path = ViewController/PickPasscodeViewController.m; sourceTree = "<group>"; };
 		F9D6006F1EADA07A0022F924 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = ../TabBarViewController.h; sourceTree = "<group>"; };
 		F9D600701EADA07A0022F924 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = ../TabBarViewController.m; sourceTree = "<group>"; };
 		F9DE25001EB46FF500C231C6 /* CastLotsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CastLotsViewController.h; path = ViewController/CastLotsViewController.h; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 		F9A25D861EB57D6400E2B1D3 /* Color */ = {
 			isa = PBXGroup;
 			children = (
+				F9A25D8D1EB5DBD700E2B1D3 /* PickPasscodeViewController.h */,
+				F9A25D8E1EB5DBD700E2B1D3 /* PickPasscodeViewController.m */,
 				F9A25D871EB57DD900E2B1D3 /* UIColor+Hex.h */,
 				F9A25D881EB57DD900E2B1D3 /* UIColor+Hex.m */,
 				F9A25D8A1EB5829000E2B1D3 /* NSString+Hex.h */,
@@ -565,6 +570,7 @@
 				F9A25D891EB57DD900E2B1D3 /* UIColor+Hex.m in Sources */,
 				F94C2A5D1E9FB54800E707D9 /* HeroBaseController.swift in Sources */,
 				F94C2A701E9FB54800E707D9 /* SourcePreprocessor.swift in Sources */,
+				F9A25D8F1EB5DBD700E2B1D3 /* PickPasscodeViewController.m in Sources */,
 				F9A25D851EB5740D00E2B1D3 /* PickColorViewController.m in Sources */,
 				F9547B7A1EB2D3FD0056F67D /* DiceSwitchViewController.m in Sources */,
 				F9DE25021EB46FF500C231C6 /* CastLotsViewController.m in Sources */,

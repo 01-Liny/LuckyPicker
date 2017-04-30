@@ -188,7 +188,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rib-cR-IIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-740" y="1154"/>
+            <point key="canvasLocation" x="-1567" y="1877"/>
         </scene>
         <!--Pick-->
         <scene sceneID="8ia-wQ-wJz">
@@ -276,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gD1-tO-dq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-740" y="1877"/>
+            <point key="canvasLocation" x="-1567" y="2602"/>
         </scene>
         <!--Add Content View Controller-->
         <scene sceneID="l7M-ZV-tMx">
@@ -427,7 +427,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oa8-Yd-Y6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="1154"/>
+            <point key="canvasLocation" x="-740" y="1877"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -500,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="-367"/>
+            <point key="canvasLocation" x="1554" y="-335"/>
         </scene>
         <!--Dice Switch View Controller-->
         <scene sceneID="pWY-4b-rhN">
@@ -765,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gh4-Hr-f7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4293.6000000000004" y="132.23388305847078"/>
+            <point key="canvasLocation" x="-4078" y="419"/>
         </scene>
         <!--Cast Lots View Controller-->
         <scene sceneID="sIb-0t-MO4">
@@ -842,7 +842,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gh-HK-LfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4294" y="768"/>
+            <point key="canvasLocation" x="-3274" y="1103"/>
         </scene>
         <!--Color/Passcode-->
         <scene sceneID="oxf-Mk-fIB">
@@ -868,24 +868,6 @@
             </objects>
             <point key="canvasLocation" x="-1567" y="-335"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="fTd-1G-Ysw">
-            <objects>
-                <viewController id="Qah-lS-KVh" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FX4-bK-5y4"/>
-                        <viewControllerLayoutGuide type="bottom" id="vM7-Ir-arr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="X3d-jt-7bH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KZS-lm-MlY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-740" y="-1023"/>
-        </scene>
         <!--Color Switch View Controller-->
         <scene sceneID="fKX-xS-Pc1">
             <objects>
@@ -904,7 +886,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l8J-ZC-ufa" userLabel="Passcode Ui View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <connections>
-                                            <segue destination="Qah-lS-KVh" kind="embed" id="MKz-cA-DXX"/>
+                                            <segue destination="ksy-ZX-V9h" kind="embed" id="sFI-K2-ira"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbh-mM-jSN" userLabel="Color Ui View">
@@ -957,7 +939,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPo-od-76J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-721" y="-335"/>
+            <point key="canvasLocation" x="-1567" y="-1040"/>
         </scene>
         <!--Pick Color View Controller-->
         <scene sceneID="Rni-mz-qnB">
@@ -1036,7 +1018,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7r-ga-ZLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="121" y="-336"/>
+            <point key="canvasLocation" x="-740" y="-1041"/>
+        </scene>
+        <!--Pick Passcode View Controller-->
+        <scene sceneID="91T-KF-QM3">
+            <objects>
+                <viewController id="ksy-ZX-V9h" customClass="PickPasscodeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zqQ-Ej-Rv4"/>
+                        <viewControllerLayoutGuide type="bottom" id="eOt-cZ-92f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zem-vV-ewR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgt-DI-8It">
+                                <rect key="frame" x="0.0" y="388" width="375" height="166"/>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lX-N5-BuV">
+                                <rect key="frame" x="32" y="8" width="311" height="311"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press The Pick" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldq-xC-zjP">
+                                        <rect key="frame" x="68" y="33" width="175" height="245"/>
+                                        <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="70"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ldq-xC-zjP" firstAttribute="centerY" secondItem="0lX-N5-BuV" secondAttribute="centerY" id="200-79-GxQ"/>
+                                    <constraint firstAttribute="width" secondItem="0lX-N5-BuV" secondAttribute="height" multiplier="1:1" id="59h-9N-g2L"/>
+                                    <constraint firstItem="ldq-xC-zjP" firstAttribute="centerX" secondItem="0lX-N5-BuV" secondAttribute="centerX" id="DB8-sX-5Z3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-Cy-l9O" userLabel="Pick">
+                                <rect key="frame" x="112" y="333.5" width="151" height="54.5"/>
+                                <color key="backgroundColor" red="1" green="0.51764705879999995" blue="0.14901960780000001" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Pick">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="24" name=".SFNSText"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2666666667" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rSS-Cy-l9O" firstAttribute="leading" secondItem="Zem-vV-ewR" secondAttribute="leadingMargin" constant="96" id="2lM-ag-EcL"/>
+                            <constraint firstAttribute="trailing" secondItem="Fgt-DI-8It" secondAttribute="trailing" id="3iU-Ym-adK"/>
+                            <constraint firstItem="0lX-N5-BuV" firstAttribute="centerX" secondItem="Zem-vV-ewR" secondAttribute="centerX" id="5jH-xM-xpO"/>
+                            <constraint firstItem="Fgt-DI-8It" firstAttribute="leading" secondItem="Zem-vV-ewR" secondAttribute="leading" id="RLX-7q-8P3"/>
+                            <constraint firstItem="rSS-Cy-l9O" firstAttribute="top" secondItem="0lX-N5-BuV" secondAttribute="bottom" multiplier="1.02" constant="8" symbolic="YES" id="Y0q-ha-TfV"/>
+                            <constraint firstItem="Fgt-DI-8It" firstAttribute="height" secondItem="Zem-vV-ewR" secondAttribute="height" multiplier="0.3" id="YVp-qj-A3g"/>
+                            <constraint firstItem="rSS-Cy-l9O" firstAttribute="centerX" secondItem="0lX-N5-BuV" secondAttribute="centerX" id="Zye-s2-0VU"/>
+                            <constraint firstItem="0lX-N5-BuV" firstAttribute="top" secondItem="zqQ-Ej-Rv4" secondAttribute="bottom" multiplier="2" constant="8" symbolic="YES" id="aqa-nk-ps9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Fgt-DI-8It" secondAttribute="bottom" id="i8d-J6-VhM"/>
+                            <constraint firstItem="0lX-N5-BuV" firstAttribute="leading" secondItem="Zem-vV-ewR" secondAttribute="leadingMargin" multiplier="2" id="iml-lT-g6J"/>
+                            <constraint firstItem="Fgt-DI-8It" firstAttribute="top" secondItem="rSS-Cy-l9O" secondAttribute="bottom" id="wMv-WE-h62"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="Fgt-DI-8It" id="HLM-Za-sXS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NbE-0g-jPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1567" y="-1688"/>
         </scene>
     </scenes>
     <resources>
