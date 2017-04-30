@@ -32,6 +32,7 @@
 @property (strong, nonatomic) NSTimer *currentButtonTimer;
 
 @property (assign, nonatomic) Boolean isNormalColor;
+@property (assign, nonatomic) Boolean isAnimating;
 
 @end
 
@@ -103,6 +104,7 @@
     [super viewDidLoad];
     
     self.isNormalColor = true;
+    self.isAnimating = false;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -177,6 +179,9 @@
 
 - (IBAction)pick:(id)sender
 {
+    if(self.isAnimating)
+        return;
+    
     [UIView animateWithDuration:0.1
                      animations:^{
                          self.pickView.backgroundColor = [UIColor colorWithHexString:@"#6983ac"];
@@ -218,6 +223,8 @@
 
 - (void)generate
 {
+    self.isAnimating = true;
+    
     UIColor *color;
     NSString *hexString;
     NSString *colorName;
@@ -287,7 +294,10 @@
                                                                        isExpand:true
                                                                        duration:0.65
                                                                  timingFunction:nil
-                                                                     completion:nil];
+                                                                     completion:^()
+                                           {
+                                               self.isAnimating = false;
+                                           }];
                                       }];
 }
 
