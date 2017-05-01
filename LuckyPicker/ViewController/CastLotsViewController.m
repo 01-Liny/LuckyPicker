@@ -46,6 +46,8 @@ typedef NS_ENUM(NSInteger, ViewStatus)
 
 @property (assign, nonatomic) Boolean isPicking;//记录是否正在处于Pick按钮触发的动画中，这样多次按下Pick按钮，也只会生成一次
 
+@property (assign, nonatomic) Boolean isFirstRunViewDidLayoutSubviews;
+
 @end
 
 @implementation CastLotsViewController
@@ -201,37 +203,41 @@ typedef NS_ENUM(NSInteger, ViewStatus)
     self.isPicking = false;
     
     self.diceView.backgroundColor = [UIColor clearColor];
-    
+    self.isFirstRunViewDidLayoutSubviews = true;
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewDidLayoutSubviews
 {
-    [super viewDidAppear:animated];
-    
-    //pickButton add shadow
-    [self addShadow:self.pickButton];
-    self.pickButton.layer.cornerRadius = 5;
-    
+    [super viewDidLayoutSubviews];
+    if (self.isFirstRunViewDidLayoutSubviews)
+    {
+        self.isFirstRunViewDidLayoutSubviews = false;
+        
+        //pickButton add shadow
+        [self addShadow:self.pickButton];
+        self.pickButton.layer.cornerRadius = 5;
+        
 #warning magic code
-    //pickerView label
-    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/3.0 -145, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
-    quantityLabel.textAlignment = NSTextAlignmentRight;
-    quantityLabel.font = [UIFont boldSystemFontOfSize:17];
-    quantityLabel.textColor = [UIColor colorWithRed:1
-                                              green:1
-                                               blue:1
-                                              alpha:85.0/100];
-    quantityLabel.text = NSLocalizedString(@"quantity", nil);
-    [self.pickerView addSubview:quantityLabel];
-    
-    UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/3.0*2 +40, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
-    numberLabel.font = [UIFont boldSystemFontOfSize:17];
-    numberLabel.textColor = [UIColor colorWithRed:1
-                                            green:1
-                                             blue:1
-                                            alpha:85.0/100];
-    numberLabel.text = NSLocalizedString(@"lucky", nil);
-    [self.pickerView addSubview:numberLabel];
+        //pickerView label
+        UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/3.0 -145, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+        quantityLabel.textAlignment = NSTextAlignmentRight;
+        quantityLabel.font = [UIFont boldSystemFontOfSize:17];
+        quantityLabel.textColor = [UIColor colorWithRed:1
+                                                  green:1
+                                                   blue:1
+                                                  alpha:85.0/100];
+        quantityLabel.text = NSLocalizedString(@"quantity", nil);
+        [self.pickerView addSubview:quantityLabel];
+        
+        UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/3.0*2 +40, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+        numberLabel.font = [UIFont boldSystemFontOfSize:17];
+        numberLabel.textColor = [UIColor colorWithRed:1
+                                                green:1
+                                                 blue:1
+                                                alpha:85.0/100];
+        numberLabel.text = NSLocalizedString(@"lucky", nil);
+        [self.pickerView addSubview:numberLabel];
+    }
 }
 
 - (void)setup

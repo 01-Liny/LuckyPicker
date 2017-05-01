@@ -33,6 +33,8 @@
 @property (assign, nonatomic) Boolean isNumber;
 @property (assign, nonatomic) Boolean isCharacter;
 
+@property (assign, nonatomic) Boolean isFirstRunViewDidLayoutSubviews;
+
 @end
 
 @implementation PickPasscodeViewController
@@ -126,39 +128,45 @@
     self.randomPasscode.length = 1;
     self.isCharacter = true;
     self.isNumber = true;
+    
+    self.isFirstRunViewDidLayoutSubviews = true;
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewDidLayoutSubviews
 {
-    [super viewDidAppear:animated];
-    
-    //add length label
-    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
-    quantityLabel.font = [UIFont boldSystemFontOfSize:17];
-    quantityLabel.textColor = [UIColor colorWithRed:1
-                                              green:1
-                                               blue:1
-                                              alpha:85.0/100];
-    quantityLabel.text = NSLocalizedString(@"length", nil);
-    [self.pickerView addSubview:quantityLabel];
-    
-    //pickView
-    self.pickView.layer.cornerRadius = 10;
-    self.pickView.layer.masksToBounds = NO;
-    [self addShadow:self.pickView];
-    
-    //pickButton
-    self.pickButton.frame = self.pickView.frame;
-    
-    //numberButton
-    self.numberButton.layer.cornerRadius = 5;
-    self.numberButton.layer.masksToBounds = NO;
-    [self addShadow:self.numberButton];
-    
-    //characterButton
-    self.characterButton.layer.cornerRadius = 5;
-    self.characterButton.layer.masksToBounds = NO;
-    [self addShadow:self.characterButton];
+    [super viewDidLayoutSubviews];
+    if(self.isFirstRunViewDidLayoutSubviews)
+    {
+        self.isFirstRunViewDidLayoutSubviews = false;
+        
+        //add length label
+        UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+        quantityLabel.font = [UIFont boldSystemFontOfSize:17];
+        quantityLabel.textColor = [UIColor colorWithRed:1
+                                                  green:1
+                                                   blue:1
+                                                  alpha:85.0/100];
+        quantityLabel.text = NSLocalizedString(@"length", nil);
+        [self.pickerView addSubview:quantityLabel];
+        
+        //pickView
+        self.pickView.layer.cornerRadius = 10;
+        self.pickView.layer.masksToBounds = NO;
+        [self addShadow:self.pickView];
+        
+        //pickButton
+        self.pickButton.frame = self.pickView.frame;
+        
+        //numberButton
+        self.numberButton.layer.cornerRadius = 5;
+        self.numberButton.layer.masksToBounds = NO;
+        [self addShadow:self.numberButton];
+        
+        //characterButton
+        self.characterButton.layer.cornerRadius = 5;
+        self.characterButton.layer.masksToBounds = NO;
+        [self addShadow:self.characterButton];
+    }
 }
 
 - (void)addShadow:(UIView*)view

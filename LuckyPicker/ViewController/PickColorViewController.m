@@ -34,6 +34,8 @@
 @property (assign, nonatomic) Boolean isNormalColor;
 @property (assign, nonatomic) Boolean isAnimating;
 
+@property (assign, nonatomic) Boolean isFirstRunViewDidLayoutSubviews;
+
 @end
 
 @implementation PickColorViewController
@@ -103,32 +105,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.isFirstRunViewDidLayoutSubviews = true;
+    
     self.isNormalColor = true;
     self.isAnimating = false;
     
     [self setNormalButtonText];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewDidLayoutSubviews
 {
-    [super viewDidAppear:animated];
-    
-    //uiview
-    [self.uiview setupForBSXAnimation];
-    
-    //pickButton
-    self.pickButton.frame = self.pickView.frame;
-    
-    //pickView
-    self.pickView.layer.cornerRadius = 10;
-    self.pickView.layer.masksToBounds = NO;
-    self.pickView.backgroundColor = [UIColor colorWithHexString:@"#3B577D"];
-    [self addShadow:self.pickView];
-    
-    //normalButton
-    self.normalButton.layer.cornerRadius = 5;
-    self.normalButton.layer.masksToBounds = NO;
-    [self addShadow:self.normalButton];
+    [super viewDidLayoutSubviews];
+    if (self.isFirstRunViewDidLayoutSubviews)
+    {
+        self.isFirstRunViewDidLayoutSubviews = false;
+        
+        //uiview
+        [self.uiview setupForBSXAnimation];
+        
+        //pickButton
+        self.pickButton.frame = self.pickView.frame;
+        
+        //pickView
+        self.pickView.layer.cornerRadius = 10;
+        self.pickView.layer.masksToBounds = NO;
+        self.pickView.backgroundColor = [UIColor colorWithHexString:@"#3B577D"];
+        [self addShadow:self.pickView];
+        
+        //normalButton
+        self.normalButton.layer.cornerRadius = 5;
+        self.normalButton.layer.masksToBounds = NO;
+        [self addShadow:self.normalButton];
+    }
 }
 
 - (void)addShadow:(UIView*)view

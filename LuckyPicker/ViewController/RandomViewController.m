@@ -39,6 +39,8 @@
 @property (strong, nonatomic) CAAnimationGroup *showAnimation;
 @property (strong, nonatomic) CAAnimationGroup *hideAnimation;
 
+@property (assign, nonatomic) Boolean isFirstRunViewDidLayoutSubviews;
+
 - (UIColor*)colorWithHexString:(NSString*)hexString;
 - (void)setup;
 - (void)addShadow:(UIView*)view;
@@ -129,6 +131,7 @@
     //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     //[self setNeedsStatusBarAppearanceUpdate];
     [self setup];
+    self.isFirstRunViewDidLayoutSubviews = true;
 }
 
 - (void)setup
@@ -162,23 +165,27 @@
     [self setRepeatButton];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewDidLayoutSubviews
 {
-    [super viewDidAppear:animated];
-    
-    //pickButton
-    self.pickButton.frame = self.pickView.frame;
-    
-    //pickView
-    self.pickView.layer.cornerRadius = 10;
-    self.pickView.layer.masksToBounds = NO;
-    self.pickView.backgroundColor = [UIColor colorWithHexString:@"#3B577D"];
-    [self addShadow:self.pickView];
-    
-    //repeatButton
-    self.repeatButton.layer.cornerRadius = 5;
-    self.repeatButton.layer.masksToBounds = NO;
-    [self addShadow:self.repeatButton];
+    [super viewDidLayoutSubviews];
+    if (self.isFirstRunViewDidLayoutSubviews)
+    {
+        self.isFirstRunViewDidLayoutSubviews = false;
+        
+        //pickButton
+        self.pickButton.frame = self.pickView.frame;
+        
+        //pickView
+        self.pickView.layer.cornerRadius = 10;
+        self.pickView.layer.masksToBounds = NO;
+        self.pickView.backgroundColor = [UIColor colorWithHexString:@"#3B577D"];
+        [self addShadow:self.pickView];
+        
+        //repeatButton
+        self.repeatButton.layer.cornerRadius = 5;
+        self.repeatButton.layer.masksToBounds = NO;
+        [self addShadow:self.repeatButton];
+    }
 }
 
 - (void)addShadow:(UIView*)view

@@ -26,6 +26,8 @@
 @property (strong, nonatomic) RandomList *randomList;
 @property (assign, nonatomic) NSInteger maxQuantity;
 
+@property (assign, nonatomic) Boolean isFirstRunViewDidLayoutSubviews;
+
 @end
 
 @implementation PickListViewController
@@ -78,6 +80,8 @@
     self.pickerView.dataSource = self;
     self.pickerView.delegate = self;
     
+    self.isFirstRunViewDidLayoutSubviews = true;
+    
     [self setupPickView];
     NSLog(@"DidLoad");
 }
@@ -91,6 +95,31 @@
     self.listLabel.adjustsFontSizeToFitWidth = YES;
 }
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    if(self.isFirstRunViewDidLayoutSubviews)
+    {
+        self.isFirstRunViewDidLayoutSubviews = false;
+        
+        //pickView
+        self.pickView.layer.cornerRadius = 10;
+        self.pickView.layer.masksToBounds = NO;
+        [self addShadow:self.pickView];
+        
+        //add quantity label
+        UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+        quantityLabel.font = [UIFont boldSystemFontOfSize:17];
+        quantityLabel.textColor = [UIColor colorWithRed:1
+                                                  green:1
+                                                   blue:1
+                                                  alpha:85.0/100];
+        quantityLabel.text = NSLocalizedString(@"quantity", nil);
+        [self.pickerView addSubview:quantityLabel];
+    }
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     NSLog(@"Appear");
@@ -102,26 +131,6 @@
     self.randomListContent = nil;
     
     [self updateUI];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    //pickView
-    self.pickView.layer.cornerRadius = 10;
-    self.pickView.layer.masksToBounds = NO;
-    [self addShadow:self.pickView];
-    
-    //add quantity label
-    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
-    quantityLabel.font = [UIFont boldSystemFontOfSize:17];
-    quantityLabel.textColor = [UIColor colorWithRed:1
-                                              green:1
-                                               blue:1
-                                              alpha:85.0/100];
-    quantityLabel.text = NSLocalizedString(@"quantity", nil);
-    [self.pickerView addSubview:quantityLabel];
 }
 
 - (void)updateUI
