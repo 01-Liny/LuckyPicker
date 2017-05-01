@@ -158,6 +158,8 @@
                                              selector:@selector(keyboardWillHidden:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+    
+    [self setRepeatButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -380,7 +382,7 @@
     
     if(self.isRepeat)
     {
-        tmpString = [[NSMutableAttributedString alloc] initWithString:@"Repeat"];
+        tmpString = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"repeat", nil)];
         [tmpString addAttribute:NSForegroundColorAttributeName
                           value:tmpColor
                           range:NSMakeRange(0, tmpString.length)];
@@ -389,7 +391,7 @@
     {
         [self limitRandomListQuantity];
         
-        tmpString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"No Repeat\n%ld / %d", self.norepeatAmount, [self.randomList getOffset]]];
+        tmpString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:NSLocalizedString(@"norepeat", "with argument"), self.norepeatAmount, [self.randomList getOffset]]];
         NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
         [paragraphStyle setAlignment:NSTextAlignmentCenter];
         

@@ -139,7 +139,7 @@
                                               green:1
                                                blue:1
                                               alpha:85.0/100];
-    quantityLabel.text = @"lenght";
+    quantityLabel.text = NSLocalizedString(@"length", nil);
     [self.pickerView addSubview:quantityLabel];
     
     //pickView
@@ -268,11 +268,11 @@
 {
     if(self.isNumber)
     {
-        [self.numberButton setTitle:@"Number" forState:UIControlStateNormal];
+        [self.numberButton setTitle:NSLocalizedString(@"number", nil) forState:UIControlStateNormal];
     }
     else
     {
-        [self.numberButton setTitle:@"No Number" forState:UIControlStateNormal];
+        [self.numberButton setTitle:NSLocalizedString(@"nonumber", nil) forState:UIControlStateNormal];
     }
 }
 
@@ -280,11 +280,11 @@
 {
     if(self.isCharacter)
     {
-        [self.characterButton setTitle:@"Letter" forState:UIControlStateNormal];
+        [self.characterButton setTitle:NSLocalizedString(@"letter", nil) forState:UIControlStateNormal];
     }
     else
     {
-        [self.characterButton setTitle:@"No Letter" forState:UIControlStateNormal];
+        [self.characterButton setTitle:NSLocalizedString(@"noletter", nil) forState:UIControlStateNormal];
     }
 }
 

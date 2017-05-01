@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  LuckyPicker
+
+  Created by BangshengXie on 01/05/2017.
+  Copyright © 2017 BangshengXie. All rights reserved.
+*/
+
+//RandomViewController
+"repeat" = "Repeat";
+"norepeat" = "No Repeat \n%ld / %d";
+
+//PickPasscodeViewController
+"length" = "length";
+
+"number" = "Number";
+"nonumber" = "No Number";
+"letter" = "Letter";
+"noletter" = "No Letter";
+
+//PickColorViewController
+"normal" = "Normal";
+"material" = "Material";
+
+//CastLotsViewController
+"quantity" = "quantity";
+"lucky" = "lucky";
+
+"lowercastNumber" = "number";

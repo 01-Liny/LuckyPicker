@@ -120,7 +120,7 @@
                                               green:1
                                                blue:1
                                               alpha:85.0/100];
-    quantityLabel.text = @"quantity";
+    quantityLabel.text = NSLocalizedString(@"quantity", nil);
     [self.pickerView addSubview:quantityLabel];
 }
 

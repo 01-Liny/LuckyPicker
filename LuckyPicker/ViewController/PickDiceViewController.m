@@ -159,6 +159,7 @@
     
     self.diceView.backgroundColor = [UIColor clearColor];
 
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -171,13 +172,14 @@
     
 #warning magic code
     //pickerView label
-    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/3.0 -109, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+    UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/3.0 -145, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+    quantityLabel.textAlignment = NSTextAlignmentRight;
     quantityLabel.font = [UIFont boldSystemFontOfSize:17];
     quantityLabel.textColor = [UIColor colorWithRed:1
                                               green:1
                                                blue:1
                                               alpha:85.0/100];
-    quantityLabel.text = @"quantity";
+    quantityLabel.text = NSLocalizedString(@"quantity", nil);
     [self.pickerView addSubview:quantityLabel];
     
     UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/3.0*2 +40, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
@@ -186,7 +188,7 @@
                                             green:1
                                              blue:1
                                             alpha:85.0/100];
-    numberLabel.text = @"number";
+    numberLabel.text = NSLocalizedString(@"lowercastNumber", nil);
     [self.pickerView addSubview:numberLabel];
 }
 

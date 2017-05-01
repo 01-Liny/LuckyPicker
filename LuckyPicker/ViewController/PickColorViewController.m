@@ -105,6 +105,8 @@
     
     self.isNormalColor = true;
     self.isAnimating = false;
+    
+    [self setNormalButtonText];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -164,11 +166,11 @@
     NSMutableAttributedString *string;
     if(self.isNormalColor)
     {
-        string = [[NSMutableAttributedString alloc] initWithString:@"Normal"];
+        string = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"normal", nil)];
     }
     else
     {
-        string = [[NSMutableAttributedString alloc] initWithString:@"Material"];
+        string = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"material", nil)];
     }
     [string addAttribute:NSForegroundColorAttributeName
                       value:tmpColor
