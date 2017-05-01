@@ -590,10 +590,10 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="CPp-CI-3zr" kind="relationship" relationship="viewControllers" id="rEP-6T-x0g"/>
                         <segue destination="DQH-UL-Tgy" kind="relationship" relationship="viewControllers" id="wy8-fN-7Cr"/>
                         <segue destination="ZeN-Pe-7Tv" kind="relationship" relationship="viewControllers" id="tXV-RV-qxg"/>
                         <segue destination="QvR-d1-DYf" kind="relationship" relationship="viewControllers" id="9t0-Qf-qDX"/>
+                        <segue destination="CPp-CI-3zr" kind="relationship" relationship="viewControllers" id="rEP-6T-x0g"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rf-pS-UEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -848,7 +848,7 @@
         <scene sceneID="oxf-Mk-fIB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CPp-CI-3zr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Color/Passcode" image="number" id="XNy-SZ-562"/>
+                    <tabBarItem key="tabBarItem" title="Color/Passcode" image="color" id="XNy-SZ-562"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vxi-NG-Oee">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1039,52 +1039,76 @@
                                 <rect key="frame" x="32" y="8" width="311" height="311"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press The Pick" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldq-xC-zjP">
-                                        <rect key="frame" x="68" y="33" width="175" height="245"/>
+                                        <rect key="frame" x="15.5" y="33" width="280" height="245"/>
                                         <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="70"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.3411764706" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ldq-xC-zjP" firstAttribute="centerY" secondItem="0lX-N5-BuV" secondAttribute="centerY" id="200-79-GxQ"/>
                                     <constraint firstAttribute="width" secondItem="0lX-N5-BuV" secondAttribute="height" multiplier="1:1" id="59h-9N-g2L"/>
                                     <constraint firstItem="ldq-xC-zjP" firstAttribute="centerX" secondItem="0lX-N5-BuV" secondAttribute="centerX" id="DB8-sX-5Z3"/>
+                                    <constraint firstItem="ldq-xC-zjP" firstAttribute="width" secondItem="0lX-N5-BuV" secondAttribute="width" multiplier="0.9" id="b7u-Y1-qLx"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-Cy-l9O" userLabel="Pick">
-                                <rect key="frame" x="112" y="333.5" width="151" height="54.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="rSS-Cy-l9O">
+                                <rect key="frame" x="32" y="335" width="140" height="53"/>
                                 <color key="backgroundColor" red="1" green="0.51764705879999995" blue="0.14901960780000001" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Pick">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="24" name=".SFNSText"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="24"/>
+                                <state key="normal" title="Number">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeArgument:" destination="ksy-ZX-V9h" eventType="touchUpInside" id="EKj-Vp-FJm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jhl-lm-7Oe">
+                                <rect key="frame" x="202.5" y="336" width="140" height="52"/>
+                                <color key="backgroundColor" red="1" green="0.51764705879999995" blue="0.14901960780000001" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="24"/>
+                                <state key="normal" title="Letter">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeArgument:" destination="ksy-ZX-V9h" eventType="touchUpInside" id="4Vj-Za-iin"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSQ-nc-TDX">
+                                <rect key="frame" x="311" y="404" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pick:" destination="ksy-ZX-V9h" eventType="touchUpInside" id="mRY-Yx-njF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="0.4039215686" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="rSS-Cy-l9O" firstAttribute="leading" secondItem="Zem-vV-ewR" secondAttribute="leadingMargin" constant="96" id="2lM-ag-EcL"/>
+                            <constraint firstItem="jhl-lm-7Oe" firstAttribute="top" secondItem="0lX-N5-BuV" secondAttribute="bottom" multiplier="1.05" constant="1" id="0Jw-MX-c16"/>
+                            <constraint firstItem="jhl-lm-7Oe" firstAttribute="width" secondItem="0lX-N5-BuV" secondAttribute="width" multiplier="0.45" id="2EH-6o-EsL"/>
                             <constraint firstAttribute="trailing" secondItem="Fgt-DI-8It" secondAttribute="trailing" id="3iU-Ym-adK"/>
                             <constraint firstItem="0lX-N5-BuV" firstAttribute="centerX" secondItem="Zem-vV-ewR" secondAttribute="centerX" id="5jH-xM-xpO"/>
+                            <constraint firstItem="rSS-Cy-l9O" firstAttribute="leading" secondItem="0lX-N5-BuV" secondAttribute="leading" id="6LS-ho-hgB"/>
+                            <constraint firstItem="jhl-lm-7Oe" firstAttribute="trailing" secondItem="0lX-N5-BuV" secondAttribute="trailing" id="Dmj-ni-4jk"/>
+                            <constraint firstItem="Fgt-DI-8It" firstAttribute="top" secondItem="rSS-Cy-l9O" secondAttribute="bottom" id="Eg2-IX-r4I"/>
                             <constraint firstItem="Fgt-DI-8It" firstAttribute="leading" secondItem="Zem-vV-ewR" secondAttribute="leading" id="RLX-7q-8P3"/>
-                            <constraint firstItem="rSS-Cy-l9O" firstAttribute="top" secondItem="0lX-N5-BuV" secondAttribute="bottom" multiplier="1.02" constant="8" symbolic="YES" id="Y0q-ha-TfV"/>
                             <constraint firstItem="Fgt-DI-8It" firstAttribute="height" secondItem="Zem-vV-ewR" secondAttribute="height" multiplier="0.3" id="YVp-qj-A3g"/>
-                            <constraint firstItem="rSS-Cy-l9O" firstAttribute="centerX" secondItem="0lX-N5-BuV" secondAttribute="centerX" id="Zye-s2-0VU"/>
                             <constraint firstItem="0lX-N5-BuV" firstAttribute="top" secondItem="zqQ-Ej-Rv4" secondAttribute="bottom" multiplier="2" constant="8" symbolic="YES" id="aqa-nk-ps9"/>
                             <constraint firstAttribute="bottomMargin" secondItem="Fgt-DI-8It" secondAttribute="bottom" id="i8d-J6-VhM"/>
                             <constraint firstItem="0lX-N5-BuV" firstAttribute="leading" secondItem="Zem-vV-ewR" secondAttribute="leadingMargin" multiplier="2" id="iml-lT-g6J"/>
-                            <constraint firstItem="Fgt-DI-8It" firstAttribute="top" secondItem="rSS-Cy-l9O" secondAttribute="bottom" id="wMv-WE-h62"/>
+                            <constraint firstItem="Fgt-DI-8It" firstAttribute="top" secondItem="jhl-lm-7Oe" secondAttribute="bottom" id="jay-Ig-hLW"/>
+                            <constraint firstItem="rSS-Cy-l9O" firstAttribute="top" secondItem="0lX-N5-BuV" secondAttribute="bottom" multiplier="1.05" id="kke-AB-eXC"/>
+                            <constraint firstItem="rSS-Cy-l9O" firstAttribute="width" secondItem="0lX-N5-BuV" secondAttribute="width" multiplier="0.45" id="ngg-cv-CZ1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="characterButton" destination="jhl-lm-7Oe" id="iXh-FP-uY8"/>
+                        <outlet property="numberButton" destination="rSS-Cy-l9O" id="AW6-SD-y7F"/>
+                        <outlet property="pickButton" destination="oSQ-nc-TDX" id="VlX-qc-slw"/>
+                        <outlet property="pickView" destination="0lX-N5-BuV" id="rBP-R0-vb2"/>
                         <outlet property="pickerView" destination="Fgt-DI-8It" id="HLM-Za-sXS"/>
+                        <outlet property="textLabel" destination="ldq-xC-zjP" id="l5C-ji-N5i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbE-0g-jPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1095,6 +1119,7 @@
     <resources>
         <image name="add" width="24" height="24"/>
         <image name="add-circle" width="16" height="16"/>
+        <image name="color" width="37" height="37"/>
         <image name="dice" width="37" height="37"/>
         <image name="list" width="37" height="37"/>
         <image name="number" width="37" height="37"/>

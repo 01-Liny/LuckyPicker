@@ -348,6 +348,8 @@
 		F9A25D7C1EB5706D00E2B1D3 /* PickColor-Passcode */ = {
 			isa = PBXGroup;
 			children = (
+				F9A25D8D1EB5DBD700E2B1D3 /* PickPasscodeViewController.h */,
+				F9A25D8E1EB5DBD700E2B1D3 /* PickPasscodeViewController.m */,
 				F9A25D801EB5720C00E2B1D3 /* ColorSwitchViewController.h */,
 				F9A25D811EB5720C00E2B1D3 /* ColorSwitchViewController.m */,
 				F9A25D831EB5740D00E2B1D3 /* PickColorViewController.h */,
@@ -359,8 +361,6 @@
 		F9A25D861EB57D6400E2B1D3 /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				F9A25D8D1EB5DBD700E2B1D3 /* PickPasscodeViewController.h */,
-				F9A25D8E1EB5DBD700E2B1D3 /* PickPasscodeViewController.m */,
 				F9A25D871EB57DD900E2B1D3 /* UIColor+Hex.h */,
 				F9A25D881EB57DD900E2B1D3 /* UIColor+Hex.m */,
 				F9A25D8A1EB5829000E2B1D3 /* NSString+Hex.h */,
