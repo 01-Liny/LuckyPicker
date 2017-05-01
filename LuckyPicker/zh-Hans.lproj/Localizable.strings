@@ -26,3 +26,25 @@
 "lucky" = "幸运";
 
 "lowercastNumber" = "数字";
+
+//RandomTableViewController
+"edit" = "编辑";
+"delete" = "删除";
+
+//AppDelegate.m
+//CreateDataWithManagedObjectContext
+"dinnerTitle" = "晚饭吃什么呢？";
+
+"dinnerItem1" = "披萨意面";
+"dinnerItem2" = "川湘菜";
+"dinnerItem3" = "包子粥店";
+"dinnerItem4" = "日韩料理";
+"dinnerItem5" = "汉堡薯条";
+"dinnerItem6" = "麻辣烫";
+"dinnerItem7" = "火锅";
+
+
+"yesnoTitle" = "是或否?";
+
+"yesnoItem1" = "是";
+"yesnoItem2" = "否";

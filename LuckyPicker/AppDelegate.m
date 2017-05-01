@@ -23,24 +23,66 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    NSNumber *number = [defaults objectForKey:@"isFirstRun"];
-//    if(number)
-//    {
-//        NSLog(@"%@", number);
-//        NSLog(@"Second Run");
-//    }
-//    else
-//    {
-//        NSLog(@"First Run");
-//        [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"isFirstRun"];
-//    }
-//    [defaults synchronize];
-    NSLog(@"%@", [NSString hexStringWithUIColor:[UIColor blackColor]]);
-    NSLog(@"%@", [NSString hexStringWithUIColor:[UIColor whiteColor]]);
-    NSLog(@"%@", [NSString hexStringWithUIColor:[UIColor redColor]]);
-    NSLog(@"%@", [NSString hexStringWithUIColor:[UIColor colorWithHexString:@"AAAAAA"]]);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *number = [defaults objectForKey:@"isFirstRun"];
+    if(number)
+    {
+        NSLog(@"%@", number);
+        NSLog(@"Second Run");
+    }
+    else
+    {
+        NSLog(@"First Run");
+        [defaults setObject:[NSNumber numberWithInteger:0] forKey:@"isFirstRun"];
+        [self setupCoreData];
+    }
+    [defaults synchronize];
+
     
+//    //insert
+//    RandomListContent *title = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListContent"
+//                                                           inManagedObjectContext:context];
+//    title.title = @"Do it?";
+//    RandomListItem *item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+//                                                               inManagedObjectContext:context];
+//    item.title = title;
+//    item.name = @"DoIt";
+//    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+//                                                         inManagedObjectContext:context];
+//    item.title = title;
+//    item.name = @"Nope";
+//    
+//    [context save:&error];
+//    if(error)
+//    {
+//        NSLog(@"%@",error);
+//    }
+    
+//    //query
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RandomListContent"];
+//    NSSortDescriptor *dataSort = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
+//    request.sortDescriptors = @[dataSort];
+//    
+//    NSArray *allContent = [context executeFetchRequest:request
+//                                                 error:&error];
+//    if(error)
+//    {
+//        NSLog(@"%@",error);
+//    }
+//    for(RandomListContent *title in allContent)
+//    {
+//        NSLog(@"%@", title.title);
+//        for(RandomListItem *item in title.items)
+//        {
+//            NSLog(@"%@", item.name);
+//        }
+//    }
+    
+    return YES;
+}
+
+- (void)setupCoreData
+{
     //1、创建模型对象
     //获取模型路径
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"List" withExtension:@"momd"];
@@ -66,47 +108,78 @@
     //关联持久化助理
     [context setPersistentStoreCoordinator:store];
     
+    [self createDataWithManagedObjectContext:context];
+}
+
+- (void)createDataWithManagedObjectContext:(NSManagedObjectContext*)context
+{
+    RandomListContent *title;
+    RandomListItem *item;
+    
+    //insert dinnerTitle
+    title = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListContent"
+                                          inManagedObjectContext:context];
+    title.title = NSLocalizedString(@"dinnerTitle", nil);
+    
+    //insert dinnerItem
+    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+                                         inManagedObjectContext:context];
+    item.title = title;
+    item.name = NSLocalizedString(@"dinnerItem1", nil);
+    
+    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+                                         inManagedObjectContext:context];
+    item.title = title;
+    item.name = NSLocalizedString(@"dinnerItem2", nil);
+    
+    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+                                         inManagedObjectContext:context];
+    item.title = title;
+    item.name = NSLocalizedString(@"dinnerItem3", nil);
+    
+    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+                                         inManagedObjectContext:context];
+    item.title = title;
+    item.name = NSLocalizedString(@"dinnerItem4", nil);
+    
+    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+                                         inManagedObjectContext:context];
+    item.title = title;
+    item.name = NSLocalizedString(@"dinnerItem5", nil);
+    
+    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+                                         inManagedObjectContext:context];
+    item.title = title;
+    item.name = NSLocalizedString(@"dinnerItem6", nil);
+    
+    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+                                         inManagedObjectContext:context];
+    item.title = title;
+    item.name = NSLocalizedString(@"dinnerItem7", nil);
+    
+
+    //insert yesnoTitle
+    title = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListContent"
+                                          inManagedObjectContext:context];
+    title.title = NSLocalizedString(@"yesnoTitle", nil);
+    
+    //insert yesnoItem
+    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+                                         inManagedObjectContext:context];
+    item.title = title;
+    item.name = NSLocalizedString(@"yesnoItem1", nil);
+    
+    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
+                                         inManagedObjectContext:context];
+    item.title = title;
+    item.name = NSLocalizedString(@"yesnoItem2", nil);
+    
     NSError *error = nil;
-//    //insert
-//    RandomListContent *title = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListContent"
-//                                                           inManagedObjectContext:context];
-//    title.title = @"Do it?";
-//    RandomListItem *item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
-//                                                               inManagedObjectContext:context];
-//    item.title = title;
-//    item.name = @"DoIt";
-//    item = [NSEntityDescription insertNewObjectForEntityForName:@"RandomListItem"
-//                                                         inManagedObjectContext:context];
-//    item.title = title;
-//    item.name = @"Nope";
-//    
-//    [context save:&error];
-//    if(error)
-//    {
-//        NSLog(@"%@",error);
-//    }
-    
-    //query
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"RandomListContent"];
-    NSSortDescriptor *dataSort = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
-    request.sortDescriptors = @[dataSort];
-    
-    NSArray *allContent = [context executeFetchRequest:request
-                                                 error:&error];
+    [context save:&error];
     if(error)
     {
         NSLog(@"%@",error);
     }
-    for(RandomListContent *title in allContent)
-    {
-        NSLog(@"%@", title.title);
-        for(RandomListItem *item in title.items)
-        {
-            NSLog(@"%@", item.name);
-        }
-    }
-    
-    return YES;
 }
 
 

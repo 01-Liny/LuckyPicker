@@ -27,3 +27,25 @@
 "lucky" = "lucky";
 
 "lowercastNumber" = "number";
+
+//RandomTableViewController
+"edit" = "Edit";
+"delete" = "Delete";
+
+//AppDelegate.m
+//CreateDataWithManagedObjectContext
+"dinnerTitle" = "What's for dinner?";
+
+"dinnerItem1" = "Pizza";
+"dinnerItem2" = "Chicken";
+"dinnerItem3" = "Steak";
+"dinnerItem4" = "Salad";
+"dinnerItem5" = "Burgers";
+"dinnerItem6" = "Chinese";
+"dinnerItem7" = "Noodle";
+
+
+"yesnoTitle" = "Yes or No?";
+
+"yesnoItem1" = "Yes";
+"yesnoItem2" = "No";
