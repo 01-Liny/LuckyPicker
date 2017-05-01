@@ -98,11 +98,43 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
+#warning stupid code
+    //不知道为什么就这个ViewController会失效，阴影添加到了autolayout作用之前
     
-    if(self.isFirstRunViewDidLayoutSubviews)
+    //跟storyboard里面选择的view as有关系，选择iPhone7在iphone7上运行就没有问题
+    //识别是否为iphone7
+    if([[UIScreen mainScreen] bounds].size.height == 667)
     {
-        self.isFirstRunViewDidLayoutSubviews = false;
-        
+        if(self.isFirstRunViewDidLayoutSubviews)
+        {
+            self.isFirstRunViewDidLayoutSubviews = false;
+            
+            //pickView
+            self.pickView.layer.cornerRadius = 10;
+            self.pickView.layer.masksToBounds = NO;
+            [self addShadow:self.pickView];
+            
+            //add quantity label
+            UILabel *quantityLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.pickerView.frame.size.width/2+ 20, self.pickerView.frame.size.height / 2 - 51, 100, 100)];
+            quantityLabel.font = [UIFont boldSystemFontOfSize:17];
+            quantityLabel.textColor = [UIColor colorWithRed:1
+                                                      green:1
+                                                       blue:1
+                                                      alpha:85.0/100];
+            quantityLabel.text = NSLocalizedString(@"quantity", nil);
+            [self.pickerView addSubview:quantityLabel];
+        }
+    }
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    //不为iphone7
+    if([[UIScreen mainScreen] bounds].size.height != 667)
+    {
         //pickView
         self.pickView.layer.cornerRadius = 10;
         self.pickView.layer.masksToBounds = NO;
@@ -119,6 +151,7 @@
         [self.pickerView addSubview:quantityLabel];
     }
 }
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -158,6 +191,9 @@
     view.layer.shadowOpacity = 0.5;
     view.layer.shadowPath = shadowPath.CGPath;
     view.layer.shadowRadius = 6/offset;
+    
+    view.layer.rasterizationScale = [[UIScreen mainScreen] scale]; // to define retina or not
+    view.layer.shouldRasterize = YES;
 }
 
 - (void)didReceiveMemoryWarning {

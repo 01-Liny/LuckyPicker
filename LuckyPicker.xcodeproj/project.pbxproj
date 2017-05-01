@@ -89,6 +89,7 @@
 		F91E31991EB70E3A00C35D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F91E319B1EB70E3C00C35D12 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F91E319D1EB7169100C35D12 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		F91E319E1EB7805800C35D12 /* NSLayoutConstraint_Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLayoutConstraint_Description.h; sourceTree = "<group>"; };
 		F94C2A241E9FB54800E707D9 /* HeroAnimatorViewContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroAnimatorViewContext.swift; sourceTree = "<group>"; };
 		F94C2A251E9FB54800E707D9 /* HeroCoreAnimationViewContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCoreAnimationViewContext.swift; sourceTree = "<group>"; };
 		F94C2A261E9FB54800E707D9 /* HeroDefaultAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDefaultAnimator.swift; sourceTree = "<group>"; };
@@ -337,6 +338,7 @@
 				F9D6006F1EADA07A0022F924 /* TabBarViewController.h */,
 				F9D600701EADA07A0022F924 /* TabBarViewController.m */,
 				F98634971E9E08890014DE7D /* Main.storyboard */,
+				F91E319E1EB7805800C35D12 /* NSLayoutConstraint_Description.h */,
 				F9E2D3591EA9FEC8003305DB /* List.xcdatamodeld */,
 				F986349A1E9E08890014DE7D /* Assets.xcassets */,
 				F986349C1E9E08890014DE7D /* LaunchScreen.storyboard */,
@@ -762,6 +764,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bangshengxie.lucky-picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -775,6 +778,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bangshengxie.lucky-picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

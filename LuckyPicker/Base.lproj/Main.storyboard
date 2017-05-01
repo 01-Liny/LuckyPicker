@@ -209,7 +209,7 @@
                                         <rect key="frame" x="37" y="38" width="300" height="300"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press To Pick" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-f4-2NY">
-                                                <rect key="frame" x="90.5" y="61" width="120.5" height="179.5"/>
+                                                <rect key="frame" x="89.5" y="59.5" width="121" height="180"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -217,11 +217,9 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.23137254901960785" green="0.3411764705882353" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="oeI-f4-2NY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xOr-jK-xMd" secondAttribute="leading" constant="22" id="ABP-ec-Cs0"/>
-                                            <constraint firstAttribute="width" secondItem="xOr-jK-xMd" secondAttribute="height" multiplier="1:1" id="AtU-Db-TfH"/>
-                                            <constraint firstItem="oeI-f4-2NY" firstAttribute="centerX" secondItem="xOr-jK-xMd" secondAttribute="centerX" id="iMW-T5-pqx"/>
-                                            <constraint firstItem="oeI-f4-2NY" firstAttribute="centerY" secondItem="xOr-jK-xMd" secondAttribute="centerY" id="oOS-Rx-1IO"/>
-                                            <constraint firstItem="oeI-f4-2NY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xOr-jK-xMd" secondAttribute="top" constant="4" id="wrX-Dc-38t"/>
+                                            <constraint firstAttribute="width" secondItem="xOr-jK-xMd" secondAttribute="height" multiplier="1:1" id="5sc-NS-b93"/>
+                                            <constraint firstItem="oeI-f4-2NY" firstAttribute="centerX" secondItem="xOr-jK-xMd" secondAttribute="centerX" id="kjX-TL-8wK"/>
+                                            <constraint firstItem="oeI-f4-2NY" firstAttribute="centerY" secondItem="xOr-jK-xMd" secondAttribute="centerY" id="pT1-qO-EA6"/>
                                         </constraints>
                                     </view>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHn-ev-y9G">
@@ -237,13 +235,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.26666666666666666" green="0.40392156862745099" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="xOr-jK-xMd" firstAttribute="centerX" secondItem="Jnc-bH-T4R" secondAttribute="centerX" id="9Xu-8O-TFA"/>
-                                    <constraint firstItem="xOr-jK-xMd" firstAttribute="leading" secondItem="Jnc-bH-T4R" secondAttribute="leading" constant="37" id="9gh-mI-3ac"/>
+                                    <constraint firstItem="xOr-jK-xMd" firstAttribute="centerX" secondItem="Jnc-bH-T4R" secondAttribute="centerX" id="FTG-bz-Gxr"/>
                                     <constraint firstItem="qHn-ev-y9G" firstAttribute="leading" secondItem="Jnc-bH-T4R" secondAttribute="leading" id="Gid-a6-Q9y"/>
-                                    <constraint firstItem="xOr-jK-xMd" firstAttribute="top" secondItem="Jnc-bH-T4R" secondAttribute="top" constant="38" id="R5g-Q8-5J6"/>
-                                    <constraint firstItem="qHn-ev-y9G" firstAttribute="top" relation="lessThanOrEqual" secondItem="xOr-jK-xMd" secondAttribute="bottom" constant="15" id="Wqo-ai-TYn"/>
                                     <constraint firstAttribute="bottom" secondItem="qHn-ev-y9G" secondAttribute="bottom" id="Y1d-tL-2ma"/>
-                                    <constraint firstItem="xOr-jK-xMd" firstAttribute="centerX" secondItem="qHn-ev-y9G" secondAttribute="centerX" id="ooa-RL-bHx"/>
+                                    <constraint firstItem="xOr-jK-xMd" firstAttribute="leading" secondItem="Jnc-bH-T4R" secondAttribute="leading" constant="37" id="e7E-vr-53P"/>
+                                    <constraint firstItem="xOr-jK-xMd" firstAttribute="top" secondItem="Jnc-bH-T4R" secondAttribute="top" constant="38" id="xYM-Nd-bux"/>
+                                    <constraint firstItem="xOr-jK-xMd" firstAttribute="centerX" secondItem="qHn-ev-y9G" secondAttribute="centerX" id="yTu-XS-sUo"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -314,7 +311,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZoS-k2-2lL" id="j65-fV-KXE">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-6Q-DHJ">
@@ -343,7 +340,7 @@
                                         <rect key="frame" x="0.0" y="72" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jQS-rK-bvc" id="BGg-i0-QRW">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc1-2m-swm">
@@ -940,7 +937,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM2-YV-8ms" userLabel="PickView">
-                                <rect key="frame" x="67" y="213" width="240" height="128"/>
+                                <rect key="frame" x="67" y="213" width="241" height="128"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R:68 G:103 B:159 Hex: #44679F" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3b-Ki-aGf">
                                         <rect key="frame" x="26" y="35" width="189" height="58"/>
@@ -956,7 +953,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuO-IL-IhX">
-                                <rect key="frame" x="112" y="462" width="151" height="72"/>
+                                <rect key="frame" x="112" y="462" width="152" height="72"/>
                                 <color key="backgroundColor" red="1" green="0.51764705879999995" blue="0.14901960780000001" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -1051,7 +1048,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="jhl-lm-7Oe">
-                                <rect key="frame" x="202.5" y="336" width="140" height="52"/>
+                                <rect key="frame" x="203" y="336" width="139.5" height="52"/>
                                 <color key="backgroundColor" red="1" green="0.51764705879999995" blue="0.14901960780000001" alpha="0.83999999999999997" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="24"/>
                                 <state key="normal" title="Letter">
