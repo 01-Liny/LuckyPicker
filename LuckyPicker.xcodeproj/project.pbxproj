@@ -48,6 +48,7 @@
 		F9547B7A1EB2D3FD0056F67D /* DiceSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9547B791EB2D3FD0056F67D /* DiceSwitchViewController.m */; };
 		F9547B7D1EB2D6870056F67D /* PickDiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9547B7C1EB2D6870056F67D /* PickDiceViewController.m */; };
 		F97BA5E01ECABEE400076695 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97BA5DF1ECABEE400076695 /* TabBarViewController.m */; };
+		F9813CD71ECDD74500BCF680 /* RandomPrioriyList.m in Sources */ = {isa = PBXBuildFile; fileRef = F9813CD61ECDD74500BCF680 /* RandomPrioriyList.m */; };
 		F98634901E9E08890014DE7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F986348F1E9E08890014DE7D /* main.m */; };
 		F98634931E9E08890014DE7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F98634921E9E08890014DE7D /* AppDelegate.m */; };
 		F98634961E9E08890014DE7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98634951E9E08890014DE7D /* ViewController.m */; };
@@ -133,6 +134,8 @@
 		F9547B7C1EB2D6870056F67D /* PickDiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PickDiceViewController.m; path = ViewController/PickDiceViewController.m; sourceTree = "<group>"; };
 		F97BA5DE1ECABEDA00076695 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		F97BA5DF1ECABEE400076695 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		F9813CD51ECDD74500BCF680 /* RandomPrioriyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomPrioriyList.h; path = Models/Random/RandomPrioriyList.h; sourceTree = "<group>"; };
+		F9813CD61ECDD74500BCF680 /* RandomPrioriyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomPrioriyList.m; path = Models/Random/RandomPrioriyList.m; sourceTree = "<group>"; };
 		F986348B1E9E08890014DE7D /* LuckyPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F986348F1E9E08890014DE7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F98634911E9E08890014DE7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -409,6 +412,8 @@
 				F9E2D2ED1EA4AA6C003305DB /* Random.m */,
 				F9E2D2EF1EA5040D003305DB /* RandomList.h */,
 				F9E2D2F01EA5040D003305DB /* RandomList.m */,
+				F9813CD51ECDD74500BCF680 /* RandomPrioriyList.h */,
+				F9813CD61ECDD74500BCF680 /* RandomPrioriyList.m */,
 				F9E2D3071EA5E5B4003305DB /* RandomPassword.h */,
 				F9E2D3081EA5E5B4003305DB /* RandomPassword.m */,
 				F9E2D3451EA6EE9C003305DB /* RandomColor.h */,
@@ -580,6 +585,7 @@
 				F9E2D3BF1EAAE359003305DB /* RandomListItem+CoreDataProperties.m in Sources */,
 				F94C2A671E9FB54800E707D9 /* Lexer.swift in Sources */,
 				F94C2A5C1E9FB54800E707D9 /* Hero.swift in Sources */,
+				F9813CD71ECDD74500BCF680 /* RandomPrioriyList.m in Sources */,
 				F94C2A521E9FB54800E707D9 /* HeroDebugView.swift in Sources */,
 				F9E2D2DD1EA49DAD003305DB /* UIView+BSXMaterialAnimation.m in Sources */,
 				F9A25D891EB57DD900E2B1D3 /* UIColor+Hex.m in Sources */,
