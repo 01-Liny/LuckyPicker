@@ -35,7 +35,9 @@
         NSURL *sqlUrl = [NSURL fileURLWithPath:sqlPath];
         
         //设置数据库相关信息
-        [store addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqlUrl options:nil error:nil];
+        NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption:@(YES),
+                                  NSInferMappingModelAutomaticallyOption:@(YES)};
+        [store addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqlUrl options:options error:nil];
         
         //3、创建上下文
         NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];

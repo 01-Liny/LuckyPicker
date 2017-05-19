@@ -2,7 +2,7 @@
 //  RandomListItem+CoreDataClass.h
 //  LuckyPicker
 //
-//  Created by BangshengXie on 22/04/2017.
+//  Created by BangshengXie on 19/05/2017.
 //  Copyright © 2017 BangshengXie. All rights reserved.
 //
 

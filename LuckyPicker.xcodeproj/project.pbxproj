@@ -49,6 +49,10 @@
 		F9547B7D1EB2D6870056F67D /* PickDiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9547B7C1EB2D6870056F67D /* PickDiceViewController.m */; };
 		F97BA5E01ECABEE400076695 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97BA5DF1ECABEE400076695 /* TabBarViewController.m */; };
 		F9813CD71ECDD74500BCF680 /* RandomPrioriyList.m in Sources */ = {isa = PBXBuildFile; fileRef = F9813CD61ECDD74500BCF680 /* RandomPrioriyList.m */; };
+		F9813CF21ECE93D800BCF680 /* RandomListItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F9813CEB1ECE93D800BCF680 /* RandomListItem+CoreDataClass.m */; };
+		F9813CF31ECE93D800BCF680 /* RandomListItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F9813CED1ECE93D800BCF680 /* RandomListItem+CoreDataProperties.m */; };
+		F9813CF41ECE93D800BCF680 /* RandomListContent+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F9813CEF1ECE93D800BCF680 /* RandomListContent+CoreDataClass.m */; };
+		F9813CF51ECE93D800BCF680 /* RandomListContent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F9813CF11ECE93D800BCF680 /* RandomListContent+CoreDataProperties.m */; };
 		F98634901E9E08890014DE7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F986348F1E9E08890014DE7D /* main.m */; };
 		F98634931E9E08890014DE7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F98634921E9E08890014DE7D /* AppDelegate.m */; };
 		F98634961E9E08890014DE7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98634951E9E08890014DE7D /* ViewController.m */; };
@@ -75,10 +79,6 @@
 		F9E2D3581EA9E8CF003305DB /* RandomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3571EA9E8CF003305DB /* RandomTableViewController.m */; };
 		F9E2D36A1EAA0761003305DB /* List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3591EA9FEC8003305DB /* List.xcdatamodeld */; };
 		F9E2D3B51EAADDDC003305DB /* RandomListDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3B41EAADDDC003305DB /* RandomListDatabase.m */; };
-		F9E2D3BE1EAAE359003305DB /* RandomListItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3B71EAAE359003305DB /* RandomListItem+CoreDataClass.m */; };
-		F9E2D3BF1EAAE359003305DB /* RandomListItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3B91EAAE359003305DB /* RandomListItem+CoreDataProperties.m */; };
-		F9E2D3C01EAAE359003305DB /* RandomListContent+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3BB1EAAE359003305DB /* RandomListContent+CoreDataClass.m */; };
-		F9E2D3C11EAAE359003305DB /* RandomListContent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3BD1EAAE359003305DB /* RandomListContent+CoreDataProperties.m */; };
 		F9E2D3C51EAAF173003305DB /* AddContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E2D3C41EAAF173003305DB /* AddContentViewController.m */; };
 		F9F6E94F1EAC3A7A0053636C /* PickListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6E94E1EAC3A7A0053636C /* PickListViewController.m */; };
 /* End PBXBuildFile section */
@@ -136,6 +136,15 @@
 		F97BA5DF1ECABEE400076695 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		F9813CD51ECDD74500BCF680 /* RandomPrioriyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomPrioriyList.h; path = Models/Random/RandomPrioriyList.h; sourceTree = "<group>"; };
 		F9813CD61ECDD74500BCF680 /* RandomPrioriyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomPrioriyList.m; path = Models/Random/RandomPrioriyList.m; sourceTree = "<group>"; };
+		F9813CE91ECE939E00BCF680 /* List 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "List 2.xcdatamodel"; sourceTree = "<group>"; };
+		F9813CEA1ECE93D800BCF680 /* RandomListItem+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListItem+CoreDataClass.h"; path = "Models/Database/RandomListItem+CoreDataClass.h"; sourceTree = "<group>"; };
+		F9813CEB1ECE93D800BCF680 /* RandomListItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListItem+CoreDataClass.m"; path = "Models/Database/RandomListItem+CoreDataClass.m"; sourceTree = "<group>"; };
+		F9813CEC1ECE93D800BCF680 /* RandomListItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListItem+CoreDataProperties.h"; path = "Models/Database/RandomListItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F9813CED1ECE93D800BCF680 /* RandomListItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListItem+CoreDataProperties.m"; path = "Models/Database/RandomListItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F9813CEE1ECE93D800BCF680 /* RandomListContent+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListContent+CoreDataClass.h"; path = "Models/Database/RandomListContent+CoreDataClass.h"; sourceTree = "<group>"; };
+		F9813CEF1ECE93D800BCF680 /* RandomListContent+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListContent+CoreDataClass.m"; path = "Models/Database/RandomListContent+CoreDataClass.m"; sourceTree = "<group>"; };
+		F9813CF01ECE93D800BCF680 /* RandomListContent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListContent+CoreDataProperties.h"; path = "Models/Database/RandomListContent+CoreDataProperties.h"; sourceTree = "<group>"; };
+		F9813CF11ECE93D800BCF680 /* RandomListContent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListContent+CoreDataProperties.m"; path = "Models/Database/RandomListContent+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F986348B1E9E08890014DE7D /* LuckyPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F986348F1E9E08890014DE7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F98634911E9E08890014DE7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -181,14 +190,6 @@
 		F9E2D35A1EA9FEC8003305DB /* List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = List.xcdatamodel; sourceTree = "<group>"; };
 		F9E2D3B31EAADDDC003305DB /* RandomListDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomListDatabase.h; path = Models/Database/RandomListDatabase.h; sourceTree = "<group>"; };
 		F9E2D3B41EAADDDC003305DB /* RandomListDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomListDatabase.m; path = Models/Database/RandomListDatabase.m; sourceTree = "<group>"; };
-		F9E2D3B61EAAE359003305DB /* RandomListItem+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListItem+CoreDataClass.h"; path = "Models/Database/RandomListItem+CoreDataClass.h"; sourceTree = "<group>"; };
-		F9E2D3B71EAAE359003305DB /* RandomListItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListItem+CoreDataClass.m"; path = "Models/Database/RandomListItem+CoreDataClass.m"; sourceTree = "<group>"; };
-		F9E2D3B81EAAE359003305DB /* RandomListItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListItem+CoreDataProperties.h"; path = "Models/Database/RandomListItem+CoreDataProperties.h"; sourceTree = "<group>"; };
-		F9E2D3B91EAAE359003305DB /* RandomListItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListItem+CoreDataProperties.m"; path = "Models/Database/RandomListItem+CoreDataProperties.m"; sourceTree = "<group>"; };
-		F9E2D3BA1EAAE359003305DB /* RandomListContent+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListContent+CoreDataClass.h"; path = "Models/Database/RandomListContent+CoreDataClass.h"; sourceTree = "<group>"; };
-		F9E2D3BB1EAAE359003305DB /* RandomListContent+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListContent+CoreDataClass.m"; path = "Models/Database/RandomListContent+CoreDataClass.m"; sourceTree = "<group>"; };
-		F9E2D3BC1EAAE359003305DB /* RandomListContent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListContent+CoreDataProperties.h"; path = "Models/Database/RandomListContent+CoreDataProperties.h"; sourceTree = "<group>"; };
-		F9E2D3BD1EAAE359003305DB /* RandomListContent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListContent+CoreDataProperties.m"; path = "Models/Database/RandomListContent+CoreDataProperties.m"; sourceTree = "<group>"; };
 		F9E2D3C31EAAF173003305DB /* AddContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddContentViewController.h; path = ViewController/AddContentViewController.h; sourceTree = "<group>"; };
 		F9E2D3C41EAAF173003305DB /* AddContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddContentViewController.m; path = ViewController/AddContentViewController.m; sourceTree = "<group>"; };
 		F9F6E94C1EAB6D980053636C /* IdentifierAvailability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentifierAvailability.h; sourceTree = "<group>"; };
@@ -455,14 +456,14 @@
 		F9E2D35D1EAA06FB003305DB /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				F9E2D3B61EAAE359003305DB /* RandomListItem+CoreDataClass.h */,
-				F9E2D3B71EAAE359003305DB /* RandomListItem+CoreDataClass.m */,
-				F9E2D3B81EAAE359003305DB /* RandomListItem+CoreDataProperties.h */,
-				F9E2D3B91EAAE359003305DB /* RandomListItem+CoreDataProperties.m */,
-				F9E2D3BA1EAAE359003305DB /* RandomListContent+CoreDataClass.h */,
-				F9E2D3BB1EAAE359003305DB /* RandomListContent+CoreDataClass.m */,
-				F9E2D3BC1EAAE359003305DB /* RandomListContent+CoreDataProperties.h */,
-				F9E2D3BD1EAAE359003305DB /* RandomListContent+CoreDataProperties.m */,
+				F9813CEA1ECE93D800BCF680 /* RandomListItem+CoreDataClass.h */,
+				F9813CEB1ECE93D800BCF680 /* RandomListItem+CoreDataClass.m */,
+				F9813CEC1ECE93D800BCF680 /* RandomListItem+CoreDataProperties.h */,
+				F9813CED1ECE93D800BCF680 /* RandomListItem+CoreDataProperties.m */,
+				F9813CEE1ECE93D800BCF680 /* RandomListContent+CoreDataClass.h */,
+				F9813CEF1ECE93D800BCF680 /* RandomListContent+CoreDataClass.m */,
+				F9813CF01ECE93D800BCF680 /* RandomListContent+CoreDataProperties.h */,
+				F9813CF11ECE93D800BCF680 /* RandomListContent+CoreDataProperties.m */,
 				F9E2D3B31EAADDDC003305DB /* RandomListDatabase.h */,
 				F9E2D3B41EAADDDC003305DB /* RandomListDatabase.m */,
 			);
@@ -571,7 +572,6 @@
 				F9E2D2F11EA5040D003305DB /* RandomList.m in Sources */,
 				F94C2A541E9FB54800E707D9 /* Array+HeroModifier.swift in Sources */,
 				F94C2A5B1E9FB54800E707D9 /* UIViewController+Hero.swift in Sources */,
-				F9E2D3C11EAAE359003305DB /* RandomListContent+CoreDataProperties.m in Sources */,
 				F94C2A561E9FB54800E707D9 /* CAMediaTimingFunction+Hero.swift in Sources */,
 				F94C2A601E9FB54800E707D9 /* HeroModifier+HeroStringConvertible.swift in Sources */,
 				F9A25D821EB5720C00E2B1D3 /* ColorSwitchViewController.m in Sources */,
@@ -582,7 +582,6 @@
 				F94C2A5F1E9FB54800E707D9 /* HeroIndependentController.swift in Sources */,
 				F94C2A651E9FB54800E707D9 /* HeroTypes.swift in Sources */,
 				F9E2D3471EA6EE9C003305DB /* RandomColor.m in Sources */,
-				F9E2D3BF1EAAE359003305DB /* RandomListItem+CoreDataProperties.m in Sources */,
 				F94C2A671E9FB54800E707D9 /* Lexer.swift in Sources */,
 				F94C2A5C1E9FB54800E707D9 /* Hero.swift in Sources */,
 				F9813CD71ECDD74500BCF680 /* RandomPrioriyList.m in Sources */,
@@ -593,26 +592,28 @@
 				F94C2A5D1E9FB54800E707D9 /* HeroBaseController.swift in Sources */,
 				F94C2A701E9FB54800E707D9 /* SourcePreprocessor.swift in Sources */,
 				F9A25D8F1EB5DBD700E2B1D3 /* PickPasscodeViewController.m in Sources */,
+				F9813CF41ECE93D800BCF680 /* RandomListContent+CoreDataClass.m in Sources */,
 				F9A25D851EB5740D00E2B1D3 /* PickColorViewController.m in Sources */,
 				F9547B7A1EB2D3FD0056F67D /* DiceSwitchViewController.m in Sources */,
 				F9DE25021EB46FF500C231C6 /* CastLotsViewController.m in Sources */,
-				F9E2D3BE1EAAE359003305DB /* RandomListItem+CoreDataClass.m in Sources */,
 				F94C2A501E9FB54800E707D9 /* HeroViewPropertyViewContext.swift in Sources */,
 				F94C2A571E9FB54800E707D9 /* CG+Hero.swift in Sources */,
 				F94C2A581E9FB54800E707D9 /* DispatchQueue+Hero.swift in Sources */,
 				F94C2A691E9FB54800E707D9 /* Parser.swift in Sources */,
 				F94C2A4D1E9FB54800E707D9 /* HeroAnimatorViewContext.swift in Sources */,
+				F9813CF31ECE93D800BCF680 /* RandomListItem+CoreDataProperties.m in Sources */,
 				F94C2A5E1E9FB54800E707D9 /* HeroContext.swift in Sources */,
 				F94C2A5A1E9FB54800E707D9 /* UIView+Hero.swift in Sources */,
 				F9E2D2EE1EA4AA6C003305DB /* Random.m in Sources */,
 				F94C2A631E9FB54800E707D9 /* HeroStringConvertible.swift in Sources */,
+				F9813CF21ECE93D800BCF680 /* RandomListItem+CoreDataClass.m in Sources */,
 				F9E2D3581EA9E8CF003305DB /* RandomTableViewController.m in Sources */,
 				F94C2A591E9FB54800E707D9 /* UIKit+Hero.swift in Sources */,
 				F9E2D3551EA84429003305DB /* RandomViewController.m in Sources */,
-				F9E2D3C01EAAE359003305DB /* RandomListContent+CoreDataClass.m in Sources */,
 				F94C2A6E1E9FB54800E707D9 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
 				F9A25D8C1EB5829000E2B1D3 /* NSString+Hex.m in Sources */,
 				F9E2D2DC1EA49DAD003305DB /* BSXUIView.m in Sources */,
+				F9813CF51ECE93D800BCF680 /* RandomListContent+CoreDataProperties.m in Sources */,
 				F94C2A611E9FB54800E707D9 /* HeroModifier.swift in Sources */,
 				F94C2A641E9FB54800E707D9 /* HeroTargetState.swift in Sources */,
 				F94C2A531E9FB54800E707D9 /* DefaultAnimationPreprocessor.swift in Sources */,
@@ -817,9 +818,10 @@
 		F9E2D3591EA9FEC8003305DB /* List.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F9813CE91ECE939E00BCF680 /* List 2.xcdatamodel */,
 				F9E2D35A1EA9FEC8003305DB /* List.xcdatamodel */,
 			);
-			currentVersion = F9E2D35A1EA9FEC8003305DB /* List.xcdatamodel */;
+			currentVersion = F9813CE91ECE939E00BCF680 /* List 2.xcdatamodel */;
 			path = List.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
