@@ -105,7 +105,6 @@
             
             if(tmp >= randomNumber)
             {
-                self.random.toValue -= (int32_t)tmp;
                 //not the first one
                 if(index!=0)
                 {
@@ -121,6 +120,7 @@
                 index++;
         }
         
+        self.random.toValue -= (int32_t)minusValue;
         [result addObject:tmpIndexList[index]];
         
         [tmpIndexList removeObjectAtIndex:index];
