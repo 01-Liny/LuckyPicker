@@ -72,7 +72,10 @@ Pick"; ObjectID = "Vli-Qu-JDR"; */
 "eiK-jE-Qjf.text" = "2";
 
 /* Class = "UITextField"; placeholder = "Item"; ObjectID = "fFC-6Q-DHJ"; */
-"fFC-6Q-DHJ.placeholder" = "Item";
+"fFC-6Q-DHJ.placeholder" = "事件";
+
+/* Class = "UITextField"; placeholder = "priority"; ObjectID = "R4l-5N-87W"; */
+"R4l-5N-87W.placeholder" = "优先级";
 
 /* Class = "UITabBarItem"; title = " Number"; ObjectID = "gId-u2-3DI"; */
 "gId-u2-3DI.title" = " 数字";
