@@ -247,7 +247,18 @@
     {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell*)textField.superview.superview];
         RandomListItem *item = self.contentArray[indexPath.row];
-        item.name = textField.text;
+        if(textField.tag == 1)
+            item.name = textField.text;
+        else
+        {
+            NSString *string = textField.text;
+            if ([string  isEqual: @""])
+            {
+                string = @"1";
+                textField.text = string;
+            }
+            item.priority = (int32_t)[string integerValue];
+        }
     }
     else
     {
@@ -288,9 +299,20 @@
         
         RandomListItem *item = [self.contentArray objectAtIndex:indexPath.row];
         
-        UITextField *textField = cell.contentView.subviews[0];
-        textField.delegate = self;
-        textField.text = item.name;
+        NSArray *array = cell.contentView.subviews;
+        for(UITextField *textField in array)
+        {
+            if(textField.tag == 1)
+            {
+                textField.delegate = self;
+                textField.text = item.name;
+            }
+            else if (textField.tag == 2)
+            {
+                textField.delegate = self;
+                textField.text = [NSString stringWithFormat:@"%d", item.priority];
+            }
+        }
     }
     else
     {

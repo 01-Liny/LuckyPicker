@@ -9,7 +9,7 @@
 #import "PickListViewController.h"
 #import "AddContentViewController.h"
 #import "IdentifierAvailability.h"
-#import "RandomList.h"
+#import "RandomPrioriyList.h"
 
 @interface PickListViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -23,7 +23,7 @@
 
 @property (strong, nonatomic) RandomListContent *randomListContent;
 @property (strong, nonatomic) NSMutableArray *numberMutableArray;
-@property (strong, nonatomic) RandomList *randomList;
+@property (strong, nonatomic) RandomPrioriyList *randomList;
 @property (assign, nonatomic) NSInteger maxQuantity;
 
 @property (assign, nonatomic) Boolean isFirstRunViewDidLayoutSubviews;
@@ -43,12 +43,20 @@
     return _randomListContent;
 }
 
-- (RandomList *)randomList
+- (RandomPrioriyList *)randomList
 {
     if(!_randomList)
     {
-        _randomList = [[RandomList alloc] init];
-        _randomList.toValue = (int32_t)self.maxQuantity - 1;//from 0 to maxQuantity-1
+        _randomList = [[RandomPrioriyList alloc] init];
+        
+        NSArray *itemArray = [self.randomListContent.items allObjects];
+        NSMutableArray *priorityList = [[NSMutableArray alloc] init];
+        for(RandomListItem *item in itemArray)
+        {
+            [priorityList addObject:[NSString stringWithFormat:@"%d", item.priority]];
+        }
+        [_randomList setPriorityList:priorityList];
+        
         _randomList.quantity = 1;
     }
     return _randomList;
@@ -265,8 +273,8 @@
 
 - (void)generate
 {
-    if(self.randomList.toValue < 0 )
-        return;
+//    if(self.randomList.toValue < 0 )
+//        return;
     NSMutableArray *tmpList = [self.randomList generateList];
     NSMutableString *string = [NSMutableString new];
     NSArray *itemArray = [self.randomListContent.items allObjects];
