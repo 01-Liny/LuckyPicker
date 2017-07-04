@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  LuckyPicker
+
+  Created by BangshengXie on 01/05/2017.
+  Copyright © 2017 BangshengXie. All rights reserved.
+*/
+
+//RandomViewController
+"repeat" = "繰り返す";
+"norepeat" = "繰り返さない \n%ld / %d";
+
+//PickPasscodeViewController
+"length" = "長さ";
+
+"number" = "デジタル";
+"nonumber" = "ませんフィギュア";
+"letter" = "アルファベット";
+"noletter" = "ノーアルファベット";
+
+//PickColorViewController
+"normal" = "普通";
+"material" = "Material";
+
+//CastLotsViewController
+"quantity" = "数";
+"lucky" = "ラッキー";
+
+"lowercastNumber" = "数字";
+
+//RandomTableViewController
+"edit" = "編集";
+"delete" = "削除";
+
+//AppDelegate.m
+//CreateDataWithManagedObjectContext
+"dinnerTitle" = "夕食は何にしますか";
+
+"dinnerItem1" = "ハンバーグ";
+"dinnerItem2" = "ステーキ";
+"dinnerItem3" = "寿司";
+"dinnerItem4" = "ラーメン";
+"dinnerItem5" = "カレーライス";
+"dinnerItem6" = "天ぷら";
+"dinnerItem7" = "すき焼き";
+
+
+"yesnoTitle" = "Yes or No?";
+
+"yesnoItem1" = "Yes";
+"yesnoItem2" = "No";

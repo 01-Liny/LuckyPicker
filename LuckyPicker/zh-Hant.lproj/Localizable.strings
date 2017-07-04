@@ -7,14 +7,14 @@
 */
 
 //RandomViewController
-"repeat" = "重复";
-"norepeat" = "不重复 \n%ld / %d";
+"repeat" = "重複";
+"norepeat" = "不重複 \n%ld / %d";
 
 //PickPasscodeViewController
-"length" = "长度";
+"length" = "長度";
 
-"number" = "数字";
-"nonumber" = "不要数字";
+"number" = "數字";
+"nonumber" = "不要數字";
 "letter" = "字母";
 "noletter" = "不要字母";
 
@@ -23,26 +23,26 @@
 "material" = "Material";
 
 //CastLotsViewController
-"quantity" = "数量";
-"lucky" = "幸运";
+"quantity" = "數量";
+"lucky" = "幸運";
 
-"lowercastNumber" = "数字";
+"lowercastNumber" = "數字";
 
 //RandomTableViewController
-"edit" = "编辑";
-"delete" = "删除";
+"edit" = "編輯";
+"delete" = "刪除";
 
 //AppDelegate.m
 //CreateDataWithManagedObjectContext
-"dinnerTitle" = "晚饭吃什么呢？";
+"dinnerTitle" = "晚飯吃什麼呢？";
 
-"dinnerItem1" = "披萨意面";
-"dinnerItem2" = "川湘菜";
+"dinnerItem1" = "披薩意麵";
+"dinnerItem2" = "外江菜";
 "dinnerItem3" = "包子粥店";
-"dinnerItem4" = "日韩料理";
-"dinnerItem5" = "汉堡薯条";
-"dinnerItem6" = "麻辣烫";
-"dinnerItem7" = "火锅";
+"dinnerItem4" = "日韓料理";
+"dinnerItem5" = "漢堡薯條";
+"dinnerItem6" = "西式料理";
+"dinnerItem7" = "小吃甜品";
 
 
 "yesnoTitle" = "是或否?";

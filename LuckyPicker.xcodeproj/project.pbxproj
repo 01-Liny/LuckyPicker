@@ -145,6 +145,14 @@
 		F9813CEF1ECE93D800BCF680 /* RandomListContent+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListContent+CoreDataClass.m"; path = "Models/Database/RandomListContent+CoreDataClass.m"; sourceTree = "<group>"; };
 		F9813CF01ECE93D800BCF680 /* RandomListContent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RandomListContent+CoreDataProperties.h"; path = "Models/Database/RandomListContent+CoreDataProperties.h"; sourceTree = "<group>"; };
 		F9813CF11ECE93D800BCF680 /* RandomListContent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RandomListContent+CoreDataProperties.m"; path = "Models/Database/RandomListContent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		F9813CF61ECEB4AF00BCF680 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		F9813CF71ECEB4AF00BCF680 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		F9813CF81ECEB4AF00BCF680 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F9813CF91ECEB4AF00BCF680 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F9813CFA1ECEB5A300BCF680 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		F9813CFB1ECEB5A300BCF680 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F9813CFC1ECEB5A300BCF680 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F9813CFD1ECEB5A300BCF680 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F986348B1E9E08890014DE7D /* LuckyPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F986348F1E9E08890014DE7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F98634911E9E08890014DE7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -528,6 +536,8 @@
 				en,
 				Base,
 				"zh-Hans",
+				"zh-Hant",
+				ja,
 			);
 			mainGroup = F98634821E9E08890014DE7D;
 			productRefGroup = F986348C1E9E08890014DE7D /* Products */;
@@ -636,6 +646,8 @@
 			children = (
 				F91E31931EB6E94800C35D12 /* Base */,
 				F91E31951EB6E94A00C35D12 /* zh-Hans */,
+				F9813CF91ECEB4AF00BCF680 /* zh-Hant */,
+				F9813CFD1ECEB5A300BCF680 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -645,6 +657,8 @@
 			children = (
 				F91E31991EB70E3A00C35D12 /* Base */,
 				F91E319B1EB70E3C00C35D12 /* zh-Hans */,
+				F9813CF81ECEB4AF00BCF680 /* zh-Hant */,
+				F9813CFC1ECEB5A300BCF680 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -654,6 +668,8 @@
 			children = (
 				F98634981E9E08890014DE7D /* Base */,
 				F91E319D1EB7169100C35D12 /* zh-Hans */,
+				F9813CF61ECEB4AF00BCF680 /* zh-Hant */,
+				F9813CFA1ECEB5A300BCF680 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -663,6 +679,8 @@
 			children = (
 				F986349D1E9E08890014DE7D /* Base */,
 				F91E31891EB6E00D00C35D12 /* zh-Hans */,
+				F9813CF71ECEB4AF00BCF680 /* zh-Hant */,
+				F9813CFB1ECEB5A300BCF680 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -767,7 +785,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J27JGZX77C;
 				INFOPLIST_FILE = LuckyPicker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bangshengxie.lucky-picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -782,7 +800,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = J27JGZX77C;
 				INFOPLIST_FILE = LuckyPicker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bangshengxie.lucky-picker";
 				PRODUCT_NAME = "$(TARGET_NAME)";

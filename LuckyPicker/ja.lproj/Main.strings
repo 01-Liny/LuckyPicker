@@ -1,0 +1,137 @@
+
+/* Class = "UINavigationItem"; title = "Pick List"; ObjectID = "2at-4t-ZJF"; */
+"2at-4t-ZJF.title" = "幸せ拾い";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "3L3-pi-ngO"; */
+"3L3-pi-ngO.normalTitle" = "キャンセル";
+
+/* Class = "UITabBarItem"; title = "List"; ObjectID = "3tU-tt-o9f"; */
+"3tU-tt-o9f.title" = "リスト";
+
+/* Class = "UILabel"; text = "Press
+The
+Pick"; ObjectID = "Bnu-Te-wSN"; */
+"Bnu-Te-wSN.text" = "もう一度
+拾う";
+
+/* Class = "UIBarButtonItem"; title = "Return"; ObjectID = "Ewy-4l-Fgq"; */
+"Ewy-4l-Fgq.title" = "リターン";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "IGi-RR-hP0"; */
+"IGi-RR-hP0.text" = "から";
+
+/* Class = "UILabel"; text = "Score"; ObjectID = "M9Z-8v-ccX"; */
+"M9Z-8v-ccX.text" = "ポイント";
+
+/* Class = "UITextField"; text = "1"; ObjectID = "NoF-fe-Gqg"; */
+"NoF-fe-Gqg.text" = "1";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Qgt-14-cdo"; */
+"Qgt-14-cdo.text" = "0";
+
+/* Class = "UITextField"; placeholder = "priority"; ObjectID = "R4l-5N-87W"; */
+"R4l-5N-87W.placeholder" = "優先順位";
+
+/* Class = "UIButton"; normalTitle = "Pick"; ObjectID = "TeF-9p-d7t"; */
+"TeF-9p-d7t.normalTitle" = "拾い";
+
+/* Class = "UIButton"; normalTitle = "Pick"; ObjectID = "USH-S3-BeW"; */
+"USH-S3-BeW.normalTitle" = "拾い";
+
+/* Class = "UITextField"; placeholder = "Title"; ObjectID = "Vbg-xb-Fge"; */
+"Vbg-xb-Fge.placeholder" = "タイトル";
+
+/* Class = "UILabel"; text = "Press
+The
+Pick"; ObjectID = "Vli-Qu-JDR"; */
+"Vli-Qu-JDR.text" = "もう一度
+拾う";
+
+/* Class = "UILabel"; text = "Add List"; ObjectID = "X1a-YK-hbA"; */
+"X1a-YK-hbA.text" = "リストを追加";
+
+/* Class = "UITabBarItem"; title = "Color/Passcode"; ObjectID = "XNy-SZ-562"; */
+"XNy-SZ-562.title" = "色/パスワード";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "XeW-fj-luP"; */
+"XeW-fj-luP.text" = "タイトル";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "Ypt-TB-KlJ"; */
+"Ypt-TB-KlJ.title" = "編集";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "Zll-EI-yfB"; */
+"Zll-EI-yfB.normalTitle" = "完了";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "aOA-5o-lsj"; */
+"aOA-5o-lsj.text" = "ラベル";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bdJ-WB-XIR"; */
+"bdJ-WB-XIR.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Add Item"; ObjectID = "dc1-2m-swm"; */
+"dc1-2m-swm.text" = "アイテムを追加";
+
+/* Class = "UITextField"; text = "2"; ObjectID = "eiK-jE-Qjf"; */
+"eiK-jE-Qjf.text" = "2";
+
+/* Class = "UITextField"; placeholder = "Item"; ObjectID = "fFC-6Q-DHJ"; */
+"fFC-6Q-DHJ.placeholder" = "項目";
+
+/* Class = "UITabBarItem"; title = " Number"; ObjectID = "gId-u2-3DI"; */
+"gId-u2-3DI.title" = " 数字";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "hzK-7D-m8X"; */
+"hzK-7D-m8X.text" = "まで";
+
+/* Class = "UIButton"; normalTitle = "Letter"; ObjectID = "jhl-lm-7Oe"; */
+"jhl-lm-7Oe.normalTitle" = "アルファベット";
+
+/* Class = "UITabBarItem"; title = "Dice/CastLots"; ObjectID = "k8d-bU-nW9"; */
+"k8d-bU-nW9.title" = "サイコロ/抽選";
+
+/* Class = "UILabel"; text = "Press
+To
+Pick"; ObjectID = "ldq-xC-zjP"; */
+"ldq-xC-zjP.text" = "選択するた
+めに押す";
+
+/* Class = "UISegmentedControl"; m8P-KI-1Yn.segmentTitles[0] = "Color"; ObjectID = "m8P-KI-1Yn"; */
+"m8P-KI-1Yn.segmentTitles[0]" = "色";
+
+/* Class = "UISegmentedControl"; m8P-KI-1Yn.segmentTitles[1] = "Passcode"; ObjectID = "m8P-KI-1Yn"; */
+"m8P-KI-1Yn.segmentTitles[1]" = "パスワード";
+
+/* Class = "UILabel"; text = "Press
+To
+Pick"; ObjectID = "oeI-f4-2NY"; */
+"oeI-f4-2NY.text" = "選択するた
+めに押す";
+
+/* Class = "UILabel"; text = "R:68 G:103 B:159
+Hex: #44679F"; ObjectID = "p3b-Ki-aGf"; */
+"p3b-Ki-aGf.text" = "R:68 G:103 B:159
+Hex: #44679F";
+
+/* Class = "UIButton"; normalTitle = "Number"; ObjectID = "rSS-Cy-l9O"; */
+"rSS-Cy-l9O.normalTitle" = "デジタル";
+
+/* Class = "UINavigationItem"; title = "Pick"; ObjectID = "rVV-VN-ihF"; */
+"rVV-VN-ihF.title" = "拾い";
+
+/* Class = "UIButton"; normalTitle = "Pick"; ObjectID = "vNO-6w-dzK"; */
+"vNO-6w-dzK.normalTitle" = "拾い";
+
+/* Class = "UINavigationItem"; title = "Pick Number"; ObjectID = "wna-rZ-SkV"; */
+"wna-rZ-SkV.title" = "拾い数";
+
+/* Class = "UISegmentedControl"; yDq-04-PEr.segmentTitles[0] = "Dice"; ObjectID = "yDq-04-PEr"; */
+"yDq-04-PEr.segmentTitles[0]" = "サイコロ";
+
+/* Class = "UISegmentedControl"; yDq-04-PEr.segmentTitles[1] = "Cast Lots"; ObjectID = "yDq-04-PEr"; */
+"yDq-04-PEr.segmentTitles[1]" = "抽選";
+
+/* Class = "UILabel"; text = "Press
+To
+Pick"; ObjectID = "zo5-mf-1gg"; */
+"zo5-mf-1gg.text" = "選択するた
+めに押す";
